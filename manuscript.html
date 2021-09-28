@@ -1,0 +1,120 @@
+<h1 id="sec:introduction">Introduction</h1>
+<p>Extracting bone collagen for stable isotope analysis is one of the most common methods for infering ecological information from modern and fossil animals <span class="citation" data-cites="clementz2012">[@clementz2012]</span>. Removing the mineral component of bone is usually acomplised via reaction with dilute hydrochloric acid (HCl), although therlink-citationse is considerable variation in both the acid concentration and reaction time <span class="citation" data-cites="ambrose1990 pestle2010">[@ambrose1990; @pestle2010]</span>.</p>
+<h1 id="sec:background">Background</h1>
+<h1 id="sec:methods">Methods</h1>
+<h2 id="sec:methods_collection">Sample Collection</h2>
+<p>We selected three materials for analysis; dentine from a modern goat (<em>Capra hircus</em>), bone from a white tailed deer (<em>Odocoileus viginianus</em>) and dentine from blue shark (<em>Prionace glauca</em>) teeth. Goat dentine was collected by milling out several grams of powder from in-between enamel loops using a 0.5 mm inverted cone carbide dental drill bit and a handheld Dremel rotary tool. Deer bone and shark teeth were homogenized in a SPEX ball mill (<strong>put model number here</strong>) for 20 minutes. For shark teeth, since our experiments required several grams of material, we homogenized several teeth from the same individual. No attempt was made to remove the thin outer layer of enameled. The resulting powders for each animal were homogenized via repeated stirring using a vortexer to ensure that ontogenetic differences in isotope composition were minimized.</p>
+<h2 id="sec:methods_preparation">Sample Preparation</h2>
+<p>We demineralized aliquots of each material (deer bone, goat and shark dentine) using 0.1M hydrochloric acid (HCl) at 4°C. We demineralized aliquots for different amounts of time in 5 minute increments from 0 to 60 minutes, and in 10 minute increments from 60 to 120 minutes {<span class="citation" data-cites="tbl:times">@tbl:times</span>}. Briefly we weighed 2.5 - 3 mg of powder into 1.7 mL micro-centrifuge tubes and added 4°C HCl. The powdered was then placed in a 4°C refrigerator to react for the specified amount of time. The final 5 minutes of each reaction took place in a micro-centrifuge so that acid could be removed at exactly the specific demineralization time. For example for the 25 minute time step the sample was allowed to react in the refrigerator for 20 minutes and then centrifuged for 5 minutes. Each sample was then rinsed 5 times with deionized water, frozen and lyophilized overnight. We analyzed 4 aliquots at each time step. We collected Fourier Transform Infrared Spectroscopy (FTIR) on one aliquot (see #sec:methods_ftir below), while the remaining three were retained for stable isotope analysis.</p>
+<table>
+<caption>Demineralization time steps used in this study. {#tbl:times}</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">time (minutes)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0 (no HCl)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">60</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">70</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">80</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">110</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">120</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec:methods_ftir">FTIR</h2>
+<p>After demineralization we collected FTIR spectra from an aliquot at each time step to characterize changes to bulk chemistry. We used a Bruker Vertex 70 Far-Infrared FTIR, housed in the Nuclear Magnetic Resonance Facility at the University of California Merced. We collected infrared absorbance spectra from 4000 cm<sup>-1</sup> to 400 cm<sup>-1</sup> for 32 scans at a resolution of 1 cm<sup>-1</sup>. We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script <span class="citation" data-cites="rcoreteam2021">[@rcoreteam2021]</span>, which is included in the supplementary material.</p>
+<h3 id="spectral-indices">Spectral Indices</h3>
+<p>Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (<span class="citation" data-cites="tbl:indices">@tbl:indices</span>). We calculated several indices related to total carbonate and phosphate content as well as organic (collagen) content.</p>
+<table>
+<caption>FTIR indices used in this study. <em>B</em> indicates the absorbance band height at the specified wavenumber, while <em>V</em> indicates the depth of the “valley”. Since the maximum height of a particular absorbance band may not occur at exactly the reported wavenumber, we instead calculated the indices above using the local maxima or minima within ±5 cm<sup>-1</sup>. {#tbl:indices}</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Index</th>
+<th style="text-align: center;">Formula</th>
+<th style="text-align: center;">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">PCI</td>
+<td style="text-align: center;"><span class="math inline">$\frac{B_{605} + B_{565}}{V_{590}}$</span></td>
+<td style="text-align: center;"><span class="citation" data-cites="sponheimer1999">@sponheimer1999</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BPI</td>
+<td style="text-align: center;"><span class="math inline">$\frac{B_{1415}}{B_{605}}$</span></td>
+<td style="text-align: center;"><span class="citation" data-cites="legeros1991">@legeros1991</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">API</td>
+<td style="text-align: center;"><span class="math inline">$\frac{B_{1545}}{B_{605}}$</span></td>
+<td style="text-align: center;"><span class="citation" data-cites="sponheimer1999">@sponheimer1999</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">WAMPI</td>
+<td style="text-align: center;"><span class="math inline">$\frac{B_{1650}}{B_{605}}$</span></td>
+<td style="text-align: center;"><span class="citation" data-cites="roche2010">@roche2010</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="sec:results">Results</h1>
+<p><embed src="./figures/dentine_spectra.pdf" /></p>
+<h1 id="sec:discussion">Discussion</h1>
+<h1 id="sec:sup_info">Supplementary Information</h1>
+<p>All infrared spectra, stable isotope data, analysis code, and a draft version of this manuscript are available on at <a href="https://github.com/robintrayler/collagen_demineralization">github.com/robintrayler/collagen_demineralization</a></p>
+<h1 class="unnumbered" id="references">References</h1>
+<div id="refs" role="doc-bibliography">
+
+</div>

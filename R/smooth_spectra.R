@@ -3,6 +3,6 @@ smooth_spectra <- function(data) {
                                         y = absorbance))
   
   f <- approxfun(x = spline$x, y = spline$y)
-  data <- data %>% mutate(absorbance = f(wavenumber))
+  data <- data %>% mutate(absorbance_corrected = f(wavenumber))
   return(data)
 }

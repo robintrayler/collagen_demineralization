@@ -9,6 +9,7 @@ geometry: margin=1.0in
 tblPrefix: Table
 figPrefix: Figure
 secPrefix: Section
+link-citations: true
 indent: true
 header-includes:
 	- \usepackage{float}
@@ -19,16 +20,11 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
-Extracting bone collagen for stable isotope analysis is one of the most common methods for infering ecological information from modern and fossil animals [@clementz2012]. Removing the mineral component of bone is usually acomplised via reaction with dilute hydrochloric acid (HCl), although there is considerable variation in both the acid concentration and reaction time [@ambrose1990; @pestle2010]. 
-
+Extracting bone collagen for stable isotope analysis is one of the most common methods for infering ecological information from modern and fossil animals [@clementz2012]. Removing the mineral component of bone is usually acomplised via reaction with dilute hydrochloric acid (HCl), although therlink-citationse is considerable variation in both the acid concentration and reaction time [@ambrose1990; @pestle2010].
 
 # Background {#sec:background}
 
-
-
 # Methods {#sec:methods}
-
-
 
 ## Sample Collection {#sec:methods_collection} 
 
@@ -36,31 +32,7 @@ We selected three materials for analysis; dentine from a modern goat (*Capra hir
 
 ## Sample Preparation {#sec:methods_preparation}
 
-We demineralized aliquots of each material (deer bone, goat and shark dentine) using 0.1M hydrochloric acid (HCl) at 4°C. We demineralized aliquots for different amounts of time in 5 minute increments from 0 to 60 minutes, and in 10 minute increments from 60 to 120 minutes {@tbl:times}. Briefly we weighed 2.5 - 3 mg of powder into 1.7 mL micro-centrifuge tubes and added 4°C HCl. The powdered was then placed in a 4°C refrigerator to react for the specified amount of time. The final 5 minutes of each reaction took place in a micro-centrifuge so that acid could be removed at exactly the specific demineralization time. For example for the 25 minute time step the sample was allowed to react in the refrigerator for 20 minutes and then centrifuged for 5 minutes. Each sample was then rinsed 5 times with deionized water, frozen and lyophilized overnight. We analyzed 4 aliquots at each time step. We collected Fourier Transform Infrared Spectroscopy (FTIR) on one aliquot (see #sec:methods_ftir below), while the remaining three were retained for stable isotope analysis.
-
-| time (minutes) |
-|:--------------:|
-|     0 (no HCl) |
-|       5        |
-|       10       |
-|       15       |
-|       20       |
-|       25       |
-|       30       |
-|       35       |
-|       40       |
-|       45       |
-|       50       |
-|       55       |
-|       60       |
-|       70       |
-|       80       |
-|       90       |
-|       100      |
-|       110      |
-|       120      |
-
-: Demineralization time steps used in this study. {#tbl:times}
+We demineralized aliquots of each material (deer bone, goat and shark dentine) using 0.1M hydrochloric acid (HCl) at 4°C. We demineralized aliquots for different amounts of time in 5 minute increments from 0 to 60 minutes, and in 10 minute increments from 60 to 120 minutes
 
 ## FTIR {#sec:methods_ftir}
 
@@ -77,10 +49,12 @@ Several indices have been proposed to characterize the crystal-chemical properti
 |  API  |     $\frac{B_{1545}}{B_{605}}$      | @sponheimer1999 |
 | WAMPI |     $\frac{B_{1650}}{B_{605}}$      | @roche2010      |
 
-: FTIR indices used in this study. *B* indicates the absorbance band height at the specified wavenumber, while *V* indicates the depth of the "valley". Since the maximum height of a particular absorbance band may not occur at exactly the reported wavenumber, we instead calculated the indices above using the local maxima or minima within ±5 cm^-1^. {#tbl:indices}
+: FTIR indices used in this study. *B* indicates the absorbance band height at the specified wavenumber, while *V* indicates the depth of the "valley". Since the maximum height of a particular absorbance band may not occur at exactly the reported wavenumber, we instead calculated the indices above using the local maxima or minima within ±15 cm^-1^. {#tbl:indices}
 
 
 # Results {#sec:results}
+
+![FTIR spectra for *Capra hircus* dentine and dental collagen.](./figures/dentine_spectra.pdf){#fig:dentine width=50%}
 
 # Discussion {#sec:discussion}
 
