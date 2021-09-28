@@ -11,12 +11,12 @@ normalize_height <- function(data,
     filter(between(wavenumber, 
                    left = position - width, 
                    right = position + width)) %>% 
-    pull(absorbance_corrected) %>% 
+    pull(absorbance) %>% 
     max()
   
   # normalize the data to that height
   data <- data %>% 
-    mutate(absorbance_corrected = absorbance_corrected / divide_by)
+    mutate(absorbance = absorbance / divide_by)
   
   return(data)
 }
