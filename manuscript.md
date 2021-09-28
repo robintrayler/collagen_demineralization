@@ -19,6 +19,7 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
+Extracting bone collagen for stable isotope analysis is one of the most common methods for infering ecological information from modern and fossil animals [@clementz2012]. Removing the mineral component of bone is usually acomplised via reaction with dilute hydrochloric acid (HCl), although there is considerable variation in both the acid concentration and reaction time [@ambrose1990; @pestle2010]. 
 
 
 # Background {#sec:background}
@@ -67,7 +68,7 @@ After demineralization we collected FTIR spectra from an aliquot at each time st
 
 ### Spectral Indices
 
-Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen {@tbl:indices}. We calculated several indices related to total carbonate and phosphate content as well as organic (collagen) content.  
+Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). We calculated several indices related to total carbonate and phosphate content as well as organic (collagen) content.  
 
 | Index |              Formula                |    Reference    |
 |:-----:|:-----------------------------------:|:---------------:|

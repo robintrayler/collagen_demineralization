@@ -4,3 +4,5 @@
 .Ruserdata
 pandoc.md
 *.pdf
+data/.DS_Store
+.DS_Store
