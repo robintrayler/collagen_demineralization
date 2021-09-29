@@ -40,18 +40,17 @@ After demineralization we collected FTIR spectra from an aliquot at each time st
 
 ### Spectral Indices
 
-Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). We calculated several indices related to total carbonate and phosphate content as well as organic (collagen) content.  
+Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.  
 
 |          Index          |              Formula                |    Reference    |
 |:-----------------------:|:-----------------------------------:|:---------------:|
-|  *PCI*                  | $\frac{B_{605} + B_{565}}{V_{590}}$ | @sponheimer1999 |
-|  *BPI*                  |     $\frac{B_{1415}}{B_{605}}$      | @legeros1991    |
-|  *API*                  |     $\frac{B_{1545}}{B_{605}}$      | @sponheimer1999 |
-| *WAMPI*                 |     $\frac{B_{1650}}{B_{605}}$      | @roche2010      |
+|          *PCI*          | $\frac{B_{605} + B_{565}}{V_{590}}$ | @sponheimer1999 |
+|          *BPI*          |     $\frac{B_{1415}}{B_{605}}$      | @legeros1991    |
+|          *API*          |     $\frac{B_{1545}}{B_{605}}$      | @sponheimer1999 |
+|         *WAMPI*         |     $\frac{B_{1650}}{B_{605}}$      | @roche2010      |
 | $\frac{amide~1}{PO_4}$  | $\frac{B_{1650}}{B_{1000}}$         | @lebon2016      |
 
 : FTIR indices used in this study. *B* indicates the absorbance band height at the specified wavenumber, while *V* indicates the depth of the "valley". Since the maximum height of a particular absorbance band may not occur at exactly the reported wavenumber, we instead calculated the indices above using the local maxima or minima within ±15 cm^-1^. {#tbl:indices}
-
 
 # Results {#sec:results}
 

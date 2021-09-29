@@ -57,30 +57,70 @@ all_data <- all_data %>%
   ungroup()
 
 # plot the results ------------------------------------------------------------  
-color <- 'inferno'
-  all_data %>%
+color <- 'magma'
+all_data %>%
   filter(wavenumber < 2000) %>% 
   ggplot(mapping = aes(x = wavenumber,
                        y = factor(time_min),
-                       height = absorbance_corrected,
+                       height = absorbance,
                        fill = file_name,
                        color = file_name)) +
   geom_density_ridges2(stat = "identity", 
-                      scale = 8,
-                      alpha = 0.75) + 
-  theme_void() +
+                       scale = 8) + 
+  theme_minimal() +
   theme(legend.position = 'none') + 
   scale_fill_viridis(discrete = TRUE, 
                      option = color, 
                      begin = 0.2,
-                     end = 0.8) +
+                     end = 0.8,
+                     alpha = 0.65) +
   scale_color_viridis(discrete = TRUE, 
-                     option = color, 
-                     begin = 0.2,
-                     end = 0.8) + 
+                      option = color, 
+                      begin = 0.2,
+                      end = 0.8) + 
   xlim(1800, 400) + 
   xlab(expression(wavenumber~'('~cm^{-1}~')')) + 
-  ylab('time (minutes)')
+  ylab('time (minutes)') + 
+  geom_vline(xintercept = c(1020, 1640), 
+             size = 1, 
+             color = 'black',
+             linetype = 'dashed',
+             alpha = 0.75)
+
+# calculate amine / phosphate ratios ------------------------------------------
+
+calculate_AP <- function(data) {
+  amine <- data %>% 
+    filter(between(wavenumber, left = 1610, right = 1690)) %>% 
+    pull(absorbance) %>% max()
   
+  phosphate <- data %>% 
+    filter(between(wavenumber, left = 1010, right = 1040)) %>% 
+    pull(absorbance) %>% max()
+
+  return(amine / phosphate)
+}
+
+times <- unique(all_data$time_min)
+AP_storage <- data.frame(times = times, AP = 0)
+for(i in seq_along(times)) {
+  AP_storage$AP[i] <- all_data %>% 
+    filter(time_min == times[i]) %>% 
+    calculate_AP()
+}
+
+AP_storage %>% 
+  ggplot(mapping = aes(x = times, 
+                       y = AP,
+                       color = times)) + 
+  geom_point(size = 3) + 
+  scale_color_viridis( 
+                      option = color, 
+                      begin = 0.2,
+                      end = 0.8) + 
+  theme(legend.position = 'none')
+
+
+
 
 

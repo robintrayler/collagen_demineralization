@@ -31,6 +31,6 @@ fit_baseline <- function(data,
   
   data <- data %>% 
     mutate(absorbance = absorbance - f(wavenumber))
-  data$absorbance[data$absorbance < 0] = 0
+  # data$absorbance[data$absorbance < 0] = 0
   return(data)
 }
