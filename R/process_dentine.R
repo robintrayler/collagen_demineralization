@@ -58,6 +58,12 @@ all_data <- all_data %>%
 
 # plot the results ------------------------------------------------------------  
 color <- 'magma'
+
+
+peak_labels <- tibble(label = c('amide 1', 'amide 2', 'amide 3', 'v3PO4'),
+                      wavenumber = c(1640, 1540, 1230, 1020), 
+                      time_min = c(22, 22, 22, 22))
+
 all_data %>%
   filter(wavenumber < 2000) %>% 
   ggplot(mapping = aes(x = wavenumber,
@@ -65,28 +71,30 @@ all_data %>%
                        height = absorbance,
                        fill = file_name,
                        color = file_name)) +
-  geom_density_ridges2(stat = "identity", 
-                       scale = 8) + 
+  geom_density_ridges2(stat = "identity",
+                       scale = 6) +
   theme_minimal() +
-  theme(legend.position = 'none') + 
-  scale_fill_viridis(discrete = TRUE, 
-                     option = color, 
-                     begin = 0.2,
-                     end = 0.8,
-                     alpha = 0.65) +
+  theme(legend.position = 'none',
+        panel.grid.minor = element_blank()) + 
   scale_color_viridis(discrete = TRUE, 
                       option = color, 
                       begin = 0.2,
                       end = 0.8) + 
-  xlim(1800, 400) + 
+  scale_fill_viridis(discrete = TRUE, 
+                      option = color, 
+                      begin = 0.2,
+                      end = 0.8,
+                     alpha = 0.5) + 
+  xlim(1900, 400) + 
   xlab(expression(wavenumber~'('~cm^{-1}~')')) + 
   ylab('time (minutes)') + 
-  geom_vline(xintercept = c(1020, 1640), 
-             size = 1, 
+  geom_vline(data = peak_labels,
+             mapping = aes(xintercept = wavenumber),
+             # size = 1, 
              color = 'black',
              linetype = 'dashed',
              alpha = 0.75)
-
+  
 # calculate amine / phosphate ratios ------------------------------------------
 
 calculate_AP <- function(data) {

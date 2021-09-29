@@ -30,7 +30,8 @@ fit_baseline <- function(data,
   f <- approxfun(x = spline_fit$x, y = spline_fit$y)
   
   data <- data %>% 
-    mutate(absorbance = absorbance - f(wavenumber))
-  # data$absorbance[data$absorbance < 0] = 0
+    mutate(absorbance = absorbance - f(wavenumber)) %>% 
+    muatate(absorbance = absorbance + abs(min(absorbance)))
+  
   return(data)
 }
