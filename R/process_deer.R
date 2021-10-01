@@ -1,4 +1,4 @@
-rm(list = ls())
+# rm(list = ls())
 # load required packages ------------------------------------------------------
 library(tidyverse)
 library(ggridges)
@@ -42,14 +42,14 @@ all_data <- all_data %>%
   group_by(file_name) %>% 
   do(normalize_height(.,
                       position = 1650, 
-                      width = 50)) %>% 
+                      width = 20)) %>% 
   ungroup()
 
 # subtract baselines by fitting a spline to areas of low absorbance
-backgroud_positions <- c(4000, 3990, # must be in high - low, high-low order
-                         2050, 2045,
-                         775, 770,
-                         400, 390)
+backgroud_positions <- c(4000, 3950, # must be in high - low, high-low order
+                         2050, 1850,
+                         800, 750,
+                         400, 350)
 all_data <- all_data %>%
   group_by(file_name) %>%
   do(fit_baseline(., 
@@ -57,29 +57,122 @@ all_data <- all_data %>%
   ungroup()
 
 # plot the results ------------------------------------------------------------  
-color <- 'magma'
-all_data %>%
-  # filter(wavenumber < 2000) %>% 
+color <- 'viridis'
+
+peak_labels <- tibble(label = c(expression(amide~I), 
+                                expression(amide~II), 
+                                expression(amide~III), 
+                                expression(nu[3]*PO[4]^{-3}),
+                                expression(nu[2]*PO[4]^{-3})),
+                      wavenumber = c(1640, 1540, 1230, 1020, 565), 
+                      time_min = c(22, 21, 21, 20.5, 20.5))
+
+plot_segments <- tribble(~label,        ~x,      ~y,  ~yend,
+                         'amide I',    1640,       1,    20.5,   
+                         'amide II',   1540,       1,    20.5,
+                         'amide III',  1230,       1,    20,
+                         'ν3PO4',      1020,       1,    20,
+                         'ν2PO4',       565,       1,    20)
+
+time_text <- tibble(wavenumber = rep(400, length = length(unique(all_data$time_min))), 
+                    time_min   = seq_along(unique(all_data$time_min)) + 0.25, 
+                    label = unique(all_data$time_min))
+
+p2 <- all_data %>%
+  filter(wavenumber < 2000) %>% 
   ggplot(mapping = aes(x = wavenumber,
                        y = factor(time_min),
                        height = absorbance,
                        fill = file_name,
                        color = file_name)) +
-  geom_density_ridges2(stat = "identity",
-                       scale = 1.25,
-                       alpha = 0.75) +
+  geom_density_ridges(stat = "identity",
+                      scale = 6) +
   theme_minimal() +
-  theme(legend.position = 'none') + 
-  scale_fill_viridis(discrete = TRUE, 
-                     option = color, 
-                     begin = 0.2,
-                     end = 0.8) +
+  theme(legend.position = 'none',
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank()) + 
   scale_color_viridis(discrete = TRUE, 
                       option = color, 
                       begin = 0.2,
                       end = 0.8) + 
-  xlim(1800, 400) +
+  scale_fill_viridis(discrete = TRUE, 
+                     option = color, 
+                     begin = 0.2,
+                     end = 0.8,
+                     alpha = 0.5) + 
+  xlim(1900, 325) + 
   xlab(expression(wavenumber~'('~cm^{-1}~')')) + 
-  ylab('time (minutes)')
+  ylab('Absorbance') + 
+  geom_segment(data = plot_segments,
+               mapping = aes(group = label,
+                             x = x,
+                             xend = x,
+                             y = y,
+                             yend = yend), 
+               inherit.aes = FALSE,
+               linetype = 'dashed',
+               alpha = 0.75) +
+  annotate(geom = 'text',
+           x = peak_labels$wavenumber,
+           y = peak_labels$time_min, 
+           label = peak_labels$label,
+           parse = TRUE, 
+           size = 3) + 
+  annotate(geom = 'text', 
+           x = 400, 
+           y = 21,
+           label = 'time\n(min)',
+           hjust = 0) + 
+  geom_text(data = time_text, 
+            mapping = aes(x = wavenumber, 
+                          y = time_min,
+                          label = label), 
+            inherit.aes = FALSE,
+            hjust = 0) +
+  scale_y_discrete(expand = expansion(mult = c(0, 0.25))) + 
+  ggtitle(label = 'bone')
 
-# calculate amine / phosphate ratios ------------------------------------------
+p2
+pdf(file = './figures/dentine_spectra.pdf',
+    width = 4,
+    height = 6)
+p2
+dev.off()
+
+# calculate amide / phosphate ratios ------------------------------------------
+
+calculate_AP <- function(data) {
+  amine <- data %>% 
+    filter(between(wavenumber, left = 1610, right = 1690)) %>% 
+    pull(absorbance) %>% max()
+  
+  phosphate <- data %>% 
+    filter(between(wavenumber, left = 535, right = 555)) %>% 
+    pull(absorbance) %>% max()
+  
+  return(amine / phosphate)
+}
+
+times <- unique(all_data$time_min)
+AP_storage <- data.frame(times = times, AP = 0)
+for(i in seq_along(times)) {
+  AP_storage$AP[i] <- all_data %>% 
+    filter(time_min == times[i]) %>% 
+    calculate_AP()
+}
+
+AP_storage %>%
+  ggplot(mapping = aes(x = times,
+                       y = AP,
+                       color = times)) +
+  geom_point(size = 3) +
+  scale_color_viridis(
+                      option = color,
+                      begin = 0.2,
+                      end = 0.8) +
+  theme(legend.position = 'none')
+# 
+# 
+# 
+# 
+# 
