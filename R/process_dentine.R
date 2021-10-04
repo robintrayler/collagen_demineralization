@@ -70,36 +70,15 @@ all_data %>% write_csv(file = './data/corrected_goat.csv')
 # plot the results ------------------------------------------------------------  
 color <- 'magma'
 
-dont_work <- tribble(~label,                ~wavenumber,   ~label_pos, ~bottom, ~top,
-                       expression(amide~I),            1640,          23,        1,    22.5,
-                       expression(amide~II),           1545,          22,        1,    20.5,
-                       expression('A-'*CO[3]),         1540,        21.5,        1,    20.5,
-                       expression('B-'*CO[3]),         1415,          21,        1,    20.5,
-                       expression(amide~III),          1230,        20.5,        1,    20.0,
-                       expression(nu[3]*PO[4]^{-3}),   1020,        20.5,        1,    20.0,
-                       expression(CO[3]),               820,          20,        1,    20.0,
-                       expression(nu[2]*PO[4]^{-3}),    565,          20,        1,    20.0)
-
-peak_labels <- tibble(label = c(expression(amide~I), 
-                                expression(amide~II),
-                                expression('A-'*CO[3]),
-                                expression(amide~III),
-                                expression('B-'*CO[3]),
-                                expression(nu[3]*PO[4]^{-3}),
-                                expression(CO[3]),
-                                expression(nu[2]*PO[4]^{-3})),
-                      wavenumber = c(1640, 1545, 1540, 1415, 1230, 1020, 880, 565), 
-                      time_min = c(23, 22, 21, 21, 20.5, 20.5, 20.5, 21))
-
-plot_segments <- tribble(~label,        ~x,      ~y,  ~yend,
-                         'amide I',    1640,       1,    20.5,
-                         'A-CO3'  ,    1545,       1,    20.5,
-                         'amide II',   1540,       1,    20.5,
-                         'B-CO3'  ,    1415,       1,    20.5,
-                         'amide III',  1230,       1,    20,
-                         'ν3PO4',       1020,      1,    20,
-                         'CO3'  ,       870,       1,    20.5,
-                         'ν2PO4',       565,       1,    20)
+annotations <- tribble(~label,                ~wavenumber,   ~label_pos, ~bottom, ~top,
+                       'amide~I',            1640,          23,        1,    22.5,
+                       'amide~II',           1545,          22,        1,    21.0,
+                       'A~CO[3]',            1540,        21.5,        1,    20.5,
+                       'B~CO[3]',            1415,          21,        1,    20.5,
+                       'amide~III',          1230,        20.5,        1,    20.0,
+                       'nu[3]*PO[4]',        1020,        20.5,        1,    20.0,
+                       'CO[3]',               870,          20,        1,    19.5,
+                       'nu[2]*PO[4]',         565,          20,        1,    20.0)
 
 time_text <- tibble(wavenumber = rep(400, length = length(unique(all_data$time_min))), 
                     time_min   = seq_along(unique(all_data$time_min)) + 0.25, 
@@ -130,21 +109,22 @@ p <- all_data %>%
   xlim(1900, 325) + 
   xlab(expression(wavenumber~'('~cm^{-1}~')')) + 
   ylab('Absorbance') + 
-  geom_segment(data = plot_segments,
-               mapping = aes(group = label,
-                             x = x,
-                             xend = x,
-                             y = y,
-                             yend = yend), 
+  geom_segment(data = annotations,
+               mapping = aes(x = wavenumber,
+                             xend = wavenumber,
+                             y = bottom,
+                             yend = top), 
                inherit.aes = FALSE,
-               linetype = 'dashed',
+               linetype = 'dotted',
                alpha = 0.75) +
-  annotate(geom = 'text',
-           x = peak_labels$wavenumber,
-           y = peak_labels$time_min, 
-           label = peak_labels$label,
-           parse = TRUE, 
-           size = 3) + 
+  geom_text(data = annotations, 
+            mapping = aes(x = wavenumber,
+                          y = label_pos,
+                          label = label),
+            parse = TRUE,
+            inherit.aes = FALSE,
+            size = 3) + 
+  
   annotate(geom = 'text', 
            x = 400, 
            y = 21,
@@ -157,12 +137,12 @@ p <- all_data %>%
             inherit.aes = FALSE,
             hjust = 0) +
   scale_y_discrete(expand = expansion(mult = c(0, 0.25))) + 
-  ggtitle(label = 'dentine')
+  ggtitle(label = expression(italic('Capra hircus')))
 
-p
+
 pdf(file = './figures/dentine_spectra.pdf',
-    width = 4,
-    height = 6)
+    width = 5,
+    height = 10)
 p
 dev.off()
 
@@ -187,23 +167,19 @@ for(i in seq_along(times)) {
     filter(time_min == times[i]) %>% 
     calculate_AP()
 }
-
-AP_storage %>%
-  ggplot(mapping = aes(x = times,
-                       y = AP,
-                       color = times)) +
-  geom_point(size = 3) +
-  scale_color_viridis(
-    option = color,
-    begin = 0.2,
-    end = 0.8) +
-  theme(legend.position = 'none') + 
-  xlab('time (minutes)') + 
-  ylab(expression(Amide~III/nu[3]*PO[4]^{-3})) + 
-  geom_smooth(data = AP_storage %>% filter(times > 0), method = 'lm')
-
-AP_storage %>% filter(times > 0) %>% lm(AP ~ times, data = .) %>% summary()
-
-
-p3 <- ggplot() + theme_minimal()
-
+# 
+# AP_storage %>%
+#   ggplot(mapping = aes(x = times,
+#                        y = AP,
+#                        color = times)) +
+#   geom_point(size = 3) +
+#   scale_color_viridis(
+#     option = color,
+#     begin = 0.2,
+#     end = 0.8) +
+#   theme(legend.position = 'none') + 
+#   xlab('time (minutes)') + 
+#   ylab(expression(Amide~III/nu[3]*PO[4]^{-3})) + 
+#   geom_smooth(data = AP_storage %>% filter(times > 0), method = 'lm')
+# 
+# AP_storage %>% filter(times > 0) %>% lm(AP ~ times, data = .) %>% summary()
