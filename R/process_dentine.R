@@ -15,10 +15,18 @@ files <- list.files(path = './data/goat_dentine/',
 
 # define a function to read and parse the dpt files
 read_data <- function(file_path) {
-  read_table(file = file_path, 
+  
+  dat <- read_table(file = file_path, 
              col_names = FALSE) %>% 
     rename('wavenumber' = X1,
-           'absorbance' = X2) %>% 
+           'absorbance' = X2)
+  interp_grid <- seq((min(dat$wavenumber)), max(dat$wavenumber))
+  f <- dat %>% with(approxfun(x = wavenumber, y = absorbance))
+  
+  dat <- data.frame(wavenumber = interp_grid, 
+                    absorbance = f(interp_grid))
+  
+  dat %>% 
     mutate(file_name = basename(file_path),
            time_min = str_split_fixed(basename(file_path), 
                                       pattern = "\\.", 
@@ -55,6 +63,9 @@ all_data <- all_data %>%
   do(fit_baseline(., 
                   backgroud_positions = backgroud_positions)) %>%
   ungroup()
+
+
+all_data %>% write_csv(file = './data/corrected_goat.csv')
 
 # plot the results ------------------------------------------------------------  
 color <- 'magma'
@@ -162,7 +173,6 @@ for(i in seq_along(times)) {
 }
 
 AP_storage %>%
-  filter(times > 0) %>% 
   ggplot(mapping = aes(x = times,
                        y = AP,
                        color = times)) +
@@ -175,18 +185,9 @@ AP_storage %>%
   xlab('time (minutes)') + 
   ylab(expression(Amide~III/nu[3]*PO[4]^{-3})) + 
   geom_smooth(method = 'lm')
-# 
-# 
-# 
-# 
+
+AP_storage %>% filter(times > 0) %>% lm(AP ~ times, data = .) %>% summary()
 
 
 p3 <- ggplot() + theme_minimal()
-
-
-pdf(file = './figures/all_spectra.pdf', 
-    width = 10, height = 5)
-cowplot::plot_grid(p, p2, p3, nrow = 1)
-dev.off()
-# 
 

@@ -34,6 +34,7 @@ Extracting bone collagen for stable isotope analysis is one of the most common m
 # Background {#sec:background}
 
 
+
 # Methods {#sec:methods}
 
 
@@ -48,7 +49,7 @@ We demineralized aliquots of each bioapatite (deer bone, goat and shark dentine)
 
 ## FTIR {#sec:methods_ftir}
 
-We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry. We used  Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^. We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material. Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.
+We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry. We used Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^. We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material. Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.
 
 
 |  band position (cm^-1^) |           Chemical Group            |    Reference    |

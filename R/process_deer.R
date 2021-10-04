@@ -15,10 +15,18 @@ files <- list.files(path = './data/deer_bone/',
 
 # define a function to read and parse the dpt files
 read_data <- function(file_path) {
-  read_table(file = file_path, 
-             col_names = FALSE) %>% 
+  
+  dat <- read_table(file = file_path, 
+                    col_names = FALSE) %>% 
     rename('wavenumber' = X1,
-           'absorbance' = X2) %>% 
+           'absorbance' = X2)
+  interp_grid <- seq((min(dat$wavenumber)), max(dat$wavenumber))
+  f <- dat %>% with(approxfun(x = wavenumber, y = absorbance))
+  
+  dat <- data.frame(wavenumber = interp_grid, 
+                    absorbance = f(interp_grid))
+  
+  dat %>% 
     mutate(file_name = basename(file_path),
            time_min = str_split_fixed(basename(file_path), 
                                       pattern = "\\.", 
@@ -47,7 +55,7 @@ all_data <- all_data %>%
 
 # subtract baselines by fitting a spline to areas of low absorbance
 backgroud_positions <- c(4000, 3950, # must be in high - low, high-low order
-                         2050, 1850,
+                         2050, 1950,
                          800, 750,
                          400, 350)
 all_data <- all_data %>%
@@ -55,6 +63,10 @@ all_data <- all_data %>%
   do(fit_baseline(., 
                   backgroud_positions = backgroud_positions)) %>%
   ungroup()
+
+
+all_data %>% write_csv(file = './data/corrected_deer.csv')
+
 
 # plot the results ------------------------------------------------------------  
 color <- 'viridis'
