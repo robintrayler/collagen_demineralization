@@ -17,7 +17,7 @@ files <- list.files(path = './data/goat_dentine/',
 read_data <- function(file_path) {
   
   dat <- read_table(file = file_path, 
-             col_names = FALSE) %>% 
+                    col_names = FALSE) %>% 
     rename('wavenumber' = X1,
            'absorbance' = X2)
   interp_grid <- seq((min(dat$wavenumber)), max(dat$wavenumber))
@@ -70,19 +70,35 @@ all_data %>% write_csv(file = './data/corrected_goat.csv')
 # plot the results ------------------------------------------------------------  
 color <- 'magma'
 
+dont_work <- tribble(~label,                ~wavenumber,   ~label_pos, ~bottom, ~top,
+                       expression(amide~I),            1640,          23,        1,    22.5,
+                       expression(amide~II),           1545,          22,        1,    20.5,
+                       expression('A-'*CO[3]),         1540,        21.5,        1,    20.5,
+                       expression('B-'*CO[3]),         1415,          21,        1,    20.5,
+                       expression(amide~III),          1230,        20.5,        1,    20.0,
+                       expression(nu[3]*PO[4]^{-3}),   1020,        20.5,        1,    20.0,
+                       expression(CO[3]),               820,          20,        1,    20.0,
+                       expression(nu[2]*PO[4]^{-3}),    565,          20,        1,    20.0)
+
 peak_labels <- tibble(label = c(expression(amide~I), 
-                                expression(amide~II), 
-                                expression(amide~III), 
+                                expression(amide~II),
+                                expression('A-'*CO[3]),
+                                expression(amide~III),
+                                expression('B-'*CO[3]),
                                 expression(nu[3]*PO[4]^{-3}),
+                                expression(CO[3]),
                                 expression(nu[2]*PO[4]^{-3})),
-                      wavenumber = c(1640, 1540, 1230, 1020, 565), 
-                      time_min = c(22, 21, 21, 20.5, 20.5))
+                      wavenumber = c(1640, 1545, 1540, 1415, 1230, 1020, 880, 565), 
+                      time_min = c(23, 22, 21, 21, 20.5, 20.5, 20.5, 21))
 
 plot_segments <- tribble(~label,        ~x,      ~y,  ~yend,
-                         'amide I',    1640,       1,    20.5,   
+                         'amide I',    1640,       1,    20.5,
+                         'A-CO3'  ,    1545,       1,    20.5,
                          'amide II',   1540,       1,    20.5,
+                         'B-CO3'  ,    1415,       1,    20.5,
                          'amide III',  1230,       1,    20,
                          'ν3PO4',       1020,      1,    20,
+                         'CO3'  ,       870,       1,    20.5,
                          'ν2PO4',       565,       1,    20)
 
 time_text <- tibble(wavenumber = rep(400, length = length(unique(all_data$time_min))), 
@@ -178,13 +194,13 @@ AP_storage %>%
                        color = times)) +
   geom_point(size = 3) +
   scale_color_viridis(
-                      option = color,
-                      begin = 0.2,
-                      end = 0.8) +
+    option = color,
+    begin = 0.2,
+    end = 0.8) +
   theme(legend.position = 'none') + 
   xlab('time (minutes)') + 
   ylab(expression(Amide~III/nu[3]*PO[4]^{-3})) + 
-  geom_smooth(method = 'lm')
+  geom_smooth(data = AP_storage %>% filter(times > 0), method = 'lm')
 
 AP_storage %>% filter(times > 0) %>% lm(AP ~ times, data = .) %>% summary()
 

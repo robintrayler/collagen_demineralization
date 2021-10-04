@@ -29,22 +29,21 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
-Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. 
-Bone is a composite material, made of both mineral and organic components. The mineral component is primarily of hydroxylapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. 
-Dry bone is about 20 - 22wt% collagen which in turn is about 40% carbon and 15% nitrogen by weight[@ambrose1990; @vanklinken1999]. 
-Since collagen is relatively insoluble [@schwarcz1991] it persists in the fossil record for ~10^5^ years. 
+Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994].
+Bone is a composite material, made of both mineral and organic components. The mineral component is primarily of bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. 
+Dry bone is about 20 - 22wt% collagen which in turn is about 40% carbon and 15% nitrogen by weight[@ambrose1990; @vanklinken1999].
+Since collagen is relatively insoluble [@schwarcz1991] it persists in the fossil record for ~10^5^ years.
 Furthermore since the amino acid composition and elemental contents collagen are well understood and characterized [@ambrose1990; @szpak2011; @tuross1988; @tuross2002] it is reasonably straight forward to identify contaminants in collagen and remove them prior to analysis.
 
-Isolating bone collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. 
-This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. 
-HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. 
-The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002]and change one of these variable will inevitably lead to faster or slower mineral removal. 
+Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component.
+HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen.
+This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971].
+The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002]and change one of these variable will inevitably lead to faster or slower mineral removal.
 Indeed, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010].
 
-In this study we do not attempt to resolve the optimal conditions for collagen extraction *per se*. Instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant. 
+In this study we do not attempt to resolve the optimal conditions for collagen extraction *per-se*, instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant.
 Our results provide a simple, viable method for extracting collagen from well preserved modern and fossil bone.
-Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods  
-
+Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
 # Background {#sec:background}
 
@@ -58,16 +57,16 @@ Furthermore, our methods provide a framework for evaluating the the efficacy of 
 
 We selected three materials for analysis; dentine from a modern domestic goat (*Capra hricus*), bone from a white tailed deer (*Odocoileus viginianus*), and dentine from a blue shark (*Prionace glauca*). 
 The goat tooth and deer bone were fortuitously collected while the blue shark teeth were collected as part of a previous study (**citation from Sora?**). 
-We cleaned each sample of surficial contamination using a toothbrush grinding into a fine powder. 
-The deer and blue shark samples were ground in a *SPEX 8000M Mixer Mill* for 20 minutes each. 
-For shark teeth we homogenized several teeth from the same individual in order to obtain enough material for our time-step experiments. 
+We cleaned each sample of surficial contamination using a toothbrush grinding into a fine powder.
+The deer and blue shark samples were ground in a *SPEX 8000M Mixer Mill* for 20 minutes each.
+For shark teeth we homogenized several teeth from the same individual in order to obtain enough material for our time-step experiments.
 The goat dentine was hand milled form in between enamel loops and did not require further grinding. The resulting powders were further homogenized via repeated stirring using vortexer to ensure that ontogenetic difference in isotope composition were minimized.
 
 ## Demineralization {#sec:methods_preparation}
 
-We demineralized aliquots of each bioapatite (deer bone, goat and shark dentine) using 0.1M hydrochloric acid at 4°C. We demineralized in 5 minutes increments from 5 to 60 minutes and in 10 minute increments from 70 to 120 minutes. 
-For each time step we weighed 2.5 - 3 mg of powdered bioapatite into 1.7 mL micro-centrifuge tubes and added 1 mL of 0.1M HCl. 
-The bioapatite was then placed in a 4°C refrigerator for the specified amount of time. Five minutes before the specified amount of time, the samples were centrifuged for 5 minutes at 10,000 RPM and promptly rinsed using demonized water. 
+We demineralized aliquots of each bioapatite (deer bone, goat and shark dentine) using 0.1M hydrochloric acid at 4°C. We demineralized in 5 minutes increments from 5 to 60 minutes and in 10 minute increments from 70 to 120 minutes.
+For each time step we weighed 2.5 - 3 mg of powdered bioapatite into 1.7 mL micro-centrifuge tubes and added 1 mL of 0.1M HCl.
+The bioapatite was then placed in a 4°C refrigerator for the specified amount of time. Five minutes before the specified amount of time, the samples were centrifuged for 5 minutes at 10,000 RPM and promptly rinsed using demonized water.
 for example, for the 60 minute time step, the samples spent 55 minutes in the refrigerator and the 5 minutes in the centrifuge for a total of 60 minutes in acid. After rising the samples were frozen and lyophilized prior to FTIR and stable isotope analysis.
 
 ## FTIR {#sec:methods_ftir}
