@@ -111,7 +111,7 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 
 # Results {#sec:results}
 
-![FTIR spectra for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE SPECTRA FOR ALL 3 MATERIALS**](./figures/all_spectra.pdf){#fig:spectra width=100%}
+![FTIR spectra for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE SPECTRA FOR ALL 3 MATERIALS**](./figures/dentine_spectra.pdf){#fig:spectra width=100%}
 
 
 ![Stable isotope compositions for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/dentine_isotopes.pdf){#fig:isotopes width=50%}
