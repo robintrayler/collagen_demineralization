@@ -1,6 +1,15 @@
 ---
 title: Simple, Rapid Extraction of Collagen from Modern Bone
-author: Robin B. Trayler & Sora L. Kim
+author:
+  - Robin B. Trayler:
+      institute: ['Department of Life and Environmental Sciences, University of California, Merced']
+      correspondence: "yes"
+      email: rtrayler@ucmerced.edu
+  - Pedro Valencia Landa: 
+      institute: ['University of California, Santa Cruz']    
+  - Sora L. Kim:
+      institute: ['Department of Life and Environmental Sciences, University of California, Merced']
+      email: skim380@ucmerced.edu
 bibliography: /Users/robintrayler/Zotero/ref_library.bib
 csl: /Users/robintrayler/Zotero/styles/geology.csl
 pdf-engine: xelatex
@@ -10,7 +19,7 @@ tblPrefix: Table
 figPrefix: Figure
 secPrefix: Section
 link-citations: true
-indent: true
+# indent: true
 header-includes:
     - \usepackage{float}
     - \usepackage{wrapfig}
@@ -21,11 +30,15 @@ header-includes:
 
 # Notes
 
+<!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc  --lua-filter scholarly-metadata.lua --lua-filter author-info-blocks.lua -->
+
 ## References to include
 * @botta2012 - amide band positions 
 * @roche2010 - preservation and carbonate content 
 * @grunenwald2014 - carbonate in enamel 
 * @legeros1991 - enamel IR bands
+* @hankermeyer2002 - dissolution rates
+
 
 # Introduction {#sec:introduction}
 
@@ -111,7 +124,7 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 
 # Results {#sec:results}
 
-![FTIR spectra for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE SPECTRA FOR ALL 3 MATERIALS**](./figures/dentine_spectra.pdf){#fig:spectra width=100%}
+![FTIR spectra for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE SPECTRA FOR ALL 3 MATERIALS**](./figures/all_spectra.pdf){#fig:spectra width=100%}
 
 
 ![Stable isotope compositions for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/dentine_isotopes.pdf){#fig:isotopes width=50%}
