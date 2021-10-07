@@ -10,7 +10,7 @@ process_data <- function(file_path) {
     smooth_spectra() %>% 
     normalize_height(position = 1650, width = 20) %>% 
     fit_baseline(backgroud_positions = background_positions) %>% 
-    mutate(file_name = basename(file_path),
+    mutate(file_name = tools::file_path_sans_ext(basename(file_path)),
            time_min = str_split_fixed(basename(file_path), 
                                       pattern = "\\.", 
                                       n = 4)[2] %>% as.numeric()) %>% 

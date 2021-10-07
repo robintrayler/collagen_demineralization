@@ -1,9 +1,8 @@
-rm(list = ls())
 # load required packages ------------------------------------------------------
 library(tidyverse)
 library(ggridges)
 library(viridis)
-theme_set(theme_minimal())
+theme_set(theme_classic())
 
 # source functions 
 source('./R/fit_baseline.R')
@@ -25,10 +24,6 @@ deer_data <- list.files(path = './data/deer_bone/', full.names = TRUE) %>%
 #   reduce(rbind)
 
 # plot the results ------------------------------------------------------------
-goat_color  <- 'magma'
-deer_color  <- 'viridis'
-shark_color <- 'mako'
-
 # data frame of FTIR absorbance band labels
 annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
                        'amide~I',        1640,          23,        1,    22.0,
@@ -44,63 +39,75 @@ annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
 goat_spectra <- goat_data %>% 
   plot_spectra(annotations, color = 'magma') + 
   ggtitle(expression(italic('Capra'))) + 
-  xlim(1900, 350)
+  xlim(1900, 400)
+
 
 deer_spectra <- deer_data %>% 
   plot_spectra(annotations, color = 'viridis') + 
   ggtitle(expression(italic('Odocoileus'))) + 
-  xlim(1900, 350)
+  xlim(1900, 400)
 
 # shark_spectra <- shark_data %>% 
 #   plot_spectra(annotations, color = 'mako') + 
 #   ggtitle(expression(italic('baby shark do do'))) + 
 #   xlim(1900, 350)
 
-
 # save the plots for later
-pdf(file = './figures/all_spectra.pdf', width = 6, height = 10)
+pdf(file = './figures/all_spectra.pdf', width = 8, height = 6)
 cowplot::plot_grid(goat_spectra, deer_spectra, nrow = 1)
 dev.off()
 
 # calculate amide / phosphate ratios ------------------------------------------
-
-calculate_AP <- function(data) {
-  amine <- data %>% 
+amide_phosphate_ratio <- function(data) {
+  amide <- data %>% 
     filter(between(wavenumber, left = 1610, right = 1690)) %>% 
     pull(absorbance) %>% max()
   phosphate <- data %>% 
     filter(between(wavenumber, left = 535, right = 555)) %>% 
     pull(absorbance) %>% max()
-  return(amine / phosphate)
+  
+  tibble(AP = amide  / phosphate, 
+         time    = unique(data$time_min),
+         file_name = unique(data$file_name)) %>% 
+    return()
 }
 
+deer_ratio <- deer_data %>% 
+  group_by(file_name) %>% 
+  do(amide_phosphate_ratio(.)) %>% 
+  add_column(species = 'deer')
 
-file_path <- unique(all_data$file_name)
-AP_storage <- data.frame(file_path = file_path, AP = 0)
+goat_ratio <- goat_data %>% 
+  group_by(file_name) %>% 
+  do(amide_phosphate_ratio(.)) %>% 
+  add_column(species = 'goat')
 
-for(i in seq_along(file_path)) {
-  AP_storage$AP[i] <- all_data %>% 
-    filter(file_name == file_path[i]) %>% 
-    calculate_AP()
-}
-
-AP_storage <- AP_storage %>% 
-  mutate(time = str_split_fixed(string = file_path, 
-                                pattern = '\\.', n = 4)[,2] %>% 
-           as.numeric())
-
-
-AP_deer <- AP_storage %>%
-  ggplot(mapping = aes(x = time,
-                       y = AP,
-                       color = time)) +
+goat_ratio %>% 
+  ggplot(mapping = aes(x = time, 
+                       y = AP, 
+                       color = time)) + 
   geom_point(size = 3) +
   scale_color_viridis(
-    option = color,
+    option = 'magma',
     begin = 0.2,
     end = 0.8,
     alpha = 0.75) +
   theme(legend.position = 'none') +
   xlab('time (minutes)') +
-  ylab(expression(frac(Amide~III, nu[3]*PO[4]))) + 
+  ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
+  ylim(0, 8)
+
+deer_ratio %>% 
+  ggplot(mapping = aes(x = time, 
+                       y = AP, 
+                       color = time)) + 
+  geom_point(size = 3) +
+  scale_color_viridis(
+    option = 'viridis',
+    begin = 0.2,
+    end = 0.8,
+    alpha = 0.75) +
+  theme(legend.position = 'none') +
+  xlab('time (minutes)') +
+  ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
   ylim(0, 8)

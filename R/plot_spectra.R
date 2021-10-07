@@ -7,7 +7,6 @@ plot_spectra <- function(data, annotations, time_text, color) {
                          color = file_name)) +
     geom_density_ridges(stat = "identity",
                         scale = 6) +
-    theme_minimal() +
     theme(legend.position = 'none',
           panel.grid.minor = element_blank()) + 
     scale_color_viridis(discrete = TRUE, 
