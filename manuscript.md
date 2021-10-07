@@ -59,7 +59,7 @@ Our results provide a simple, viable method for extracting collagen from well pr
 Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
 # Background {#sec:background}
-
+minor change
 
 
 # Methods {#sec:methods}
