@@ -59,11 +59,9 @@ Our results provide a simple, viable method for extracting collagen from well pr
 Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
 # Background {#sec:background}
-minor change
 
 
 # Methods {#sec:methods}
-
 
 
 ## Sample Collection {#sec:methods_collection} 
@@ -133,6 +131,8 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 ![ **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/ap_ratio_dentine.pdf){#fig:index width=50%}
 
 # Discussion {#sec:discussion}
+
+
 
 # Supplementary Information {#sec:sup_info}
 
