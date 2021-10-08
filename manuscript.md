@@ -6,14 +6,14 @@ author:
       correspondence: "yes"
       email: rtrayler@ucmerced.edu
   - Pedro Valencia Landa: 
-      institute: ['University of California, Santa Cruz']    
+      institute: ['Department of Ecology and Evolutionary Biology, University of California, Santa Cruz']    
   - Sora L. Kim:
       institute: ['Department of Life and Environmental Sciences, University of California, Merced']
       email: skim380@ucmerced.edu
 bibliography: /Users/robintrayler/Zotero/ref_library.bib
 csl: /Users/robintrayler/Zotero/styles/geology.csl
 pdf-engine: xelatex
-mainfont: "Helvetica"
+#mainfont: "Helvetica"
 geometry: margin=1.0in
 tblPrefix: Table
 figPrefix: Figure
@@ -139,7 +139,7 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 All infrared spectra, stable isotope data, analysis code, and a draft version of this manuscript are available on at [github.com/robintrayler/collagen_demineralization](https://github.com/robintrayler/collagen_demineralization)
 
 
-\newpage
+\pagebreak
 
 # References {-}
 :::{#refs}

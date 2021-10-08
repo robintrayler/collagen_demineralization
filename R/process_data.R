@@ -1,4 +1,8 @@
 process_data <- function(file_path) {
+  source('./R/fit_baseline.R')
+  source('./R/normalize_height.R')
+  source('./R/smooth_spectra.R')
+  source('./R/plot_spectra.R')
   background_positions <- c(4000, 3950, # must be in high - low, high-low order
                             2050, 1950,
                             800, 750,

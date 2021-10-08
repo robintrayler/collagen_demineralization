@@ -5,11 +5,7 @@ library(viridis)
 theme_set(theme_classic())
 
 # source functions 
-source('./R/fit_baseline.R')
-source('./R/normalize_height.R')
-source('./R/smooth_spectra.R')
 source('./R/process_data.R')
-source('./R/plot_spectra.R')
 # read the data ---------------------------------------------------------------
 goat_data <- list.files(path = './data/goat_dentine/', full.names = TRUE) %>% 
   map(process_data) %>% 
@@ -66,8 +62,8 @@ amide_phosphate_ratio <- function(data) {
     filter(between(wavenumber, left = 535, right = 555)) %>% 
     pull(absorbance) %>% max()
   
-  tibble(AP = amide  / phosphate, 
-         time    = unique(data$time_min),
+  tibble(AP        = amide  / phosphate, 
+         time      = unique(data$time_min),
          file_name = unique(data$file_name)) %>% 
     return()
 }
