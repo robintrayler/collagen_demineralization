@@ -49,9 +49,9 @@ deer_spectra <- deer_data %>%
 #   xlim(1900, 350)
 
 # save the plots for later
-pdf(file = './figures/all_spectra.pdf', width = 8, height = 6)
+# pdf(file = './figures/all_spectra.pdf', width = 8, height = 6)
 cowplot::plot_grid(goat_spectra, deer_spectra, nrow = 1)
-dev.off()
+# dev.off()
 
 # calculate amide / phosphate ratios ------------------------------------------
 amide_phosphate_ratio <- function(data) {
