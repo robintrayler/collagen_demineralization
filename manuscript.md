@@ -5,15 +5,15 @@ author:
       institute: ['Department of Life and Environmental Sciences, University of California, Merced']
       correspondence: "yes"
       email: rtrayler@ucmerced.edu
-  - Pedro Valencia Landa: 
-      institute: ['Department of Ecology and Evolutionary Biology, University of California, Santa Cruz']    
+  - Pedro Valencia Landa:
+      institute: ['Department of Ecology and Evolutionary Biology, University of California, Santa Cruz']
   - Sora L. Kim:
       institute: ['Department of Life and Environmental Sciences, University of California, Merced']
       email: skim380@ucmerced.edu
 bibliography: /Users/robintrayler/Zotero/ref_library.bib
 csl: /Users/robintrayler/Zotero/styles/geology.csl
 pdf-engine: xelatex
-#mainfont: "Helvetica"
+mainfont: "Helvetica"
 geometry: margin=1.0in
 tblPrefix: Table
 figPrefix: Figure
@@ -33,9 +33,9 @@ header-includes:
 <!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc  --lua-filter scholarly-metadata.lua --lua-filter author-info-blocks.lua -->
 
 ## References to include
-* @botta2012 - amide band positions 
-* @roche2010 - preservation and carbonate content 
-* @grunenwald2014 - carbonate in enamel 
+* @botta2012 - amide band positions
+* @roche2010 - preservation and carbonate content
+* @grunenwald2014 - carbonate in enamel
 * @legeros1991 - enamel IR bands
 * @hankermeyer2002 - dissolution rates
 
@@ -43,7 +43,7 @@ header-includes:
 # Introduction {#sec:introduction}
 
 Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994].
-Bone is a composite material, made of both mineral and organic components. The mineral component is primarily of bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. 
+Bone is a composite material, made of both mineral and organic components. The mineral component is primarily of bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002].
 Dry bone is about 20 - 22wt% collagen which in turn is about 40% carbon and 15% nitrogen by weight[@ambrose1990; @vanklinken1999].
 Since collagen is relatively insoluble [@schwarcz1991] it persists in the fossil record for ~10^5^ years.
 Furthermore since the amino acid composition and elemental contents collagen are well understood and characterized [@ambrose1990; @szpak2011; @tuross1988; @tuross2002] it is reasonably straight forward to identify contaminants in collagen and remove them prior to analysis.
@@ -64,10 +64,10 @@ Furthermore, our methods provide a framework for evaluating the the efficacy of 
 # Methods {#sec:methods}
 
 
-## Sample Collection {#sec:methods_collection} 
+## Sample Collection {#sec:methods_collection}
 
-We selected three materials for analysis; dentine from a modern domestic goat (*Capra hricus*), bone from a white tailed deer (*Odocoileus viginianus*), and dentine from a blue shark (*Prionace glauca*). 
-The goat tooth and deer bone were fortuitously collected while the blue shark teeth were collected as part of a previous study (**citation from Sora?**). 
+We selected three materials for analysis; dentine from a modern domestic goat (*Capra hricus*), bone from a white tailed deer (*Odocoileus viginianus*), and dentine from a blue shark (*Prionace glauca*).
+The goat tooth and deer bone were fortuitously collected while the blue shark teeth were collected as part of a previous study (**citation from Sora?**).
 We cleaned each sample of surficial contamination using a toothbrush grinding into a fine powder.
 The deer and blue shark samples were ground in a *SPEX 8000M Mixer Mill* for 20 minutes each.
 For shark teeth we homogenized several teeth from the same individual in order to obtain enough material for our time-step experiments.
@@ -82,10 +82,10 @@ for example, for the 60 minute time step, the samples spent 55 minutes in the re
 
 ## FTIR {#sec:methods_ftir}
 
-We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry. 
-We used Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^. 
-We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material. 
-Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). 
+We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry.
+We used Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^.
+We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material.
+Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices).
 We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.
 
 
@@ -115,9 +115,9 @@ We the ratio of the amide 1  indices related to total carbonate and phosphate co
 
 ## Stable Isotope Analysis {#sec:methods_isotopes}
 
-the δ^13^C and δ^15^N values and elemental carbon and nitrogen contents of all samples were measured using a Costech 4010 Elemental Analyzer coupled with a Delta V+ Isotope Ratio Mass Spectrometer housed in the Stable Isotope Ecosystem Laboratory at the University of California, Merced. 
-Carbon and nitrogen isotope compositions were corrected for instrument drift, mass linearity, and standardized to the international VPDB and AIR scales using the USGS 40 and USGS 41a standard reference materials. 
-Mean carbon and nitrogen isotope compositions were XXXXXX XXXXXX, XXXXX, XXXXX for USGS 40 and 41a, respectively. 
+the δ^13^C and δ^15^N values and elemental carbon and nitrogen contents of all samples were measured using a Costech 4010 Elemental Analyzer coupled with a Delta V+ Isotope Ratio Mass Spectrometer housed in the Stable Isotope Ecosystem Laboratory at the University of California, Merced.
+Carbon and nitrogen isotope compositions were corrected for instrument drift, mass linearity, and standardized to the international VPDB and AIR scales using the USGS 40 and USGS 41a standard reference materials.
+Mean carbon and nitrogen isotope compositions were XXXXXX XXXXXX, XXXXX, XXXXX for USGS 40 and 41a, respectively.
 We also analyzed several aliquots of a homogenized squid tissue as an in house reference which returned δ^13^C and δ^15^N of YYYY and YYYY which are indistinguishable from the long-term average (ZZZZ).
 
 # Results {#sec:results}
