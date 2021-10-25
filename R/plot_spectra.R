@@ -1,4 +1,4 @@
-plot_spectra <- function(data, annotations, time_text, color) {
+plot_spectra <- function(data, annotations, time_text, color, scale) {
   data %>% 
     ggplot(mapping = aes(x = wavenumber,
                          y = factor(time_min),
@@ -6,7 +6,7 @@ plot_spectra <- function(data, annotations, time_text, color) {
                          fill = file_name,
                          color = file_name)) +
     geom_density_ridges(stat = "identity",
-                        scale = 6) +
+                        scale = scale) +
     theme(legend.position = 'none',
           panel.grid.minor = element_blank()) + 
     scale_color_viridis(discrete = TRUE, 

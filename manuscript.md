@@ -82,10 +82,15 @@ for example, for the 60 minute time step, the samples spent 55 minutes in the re
 
 ## FTIR {#sec:methods_ftir}
 
+We collected infrared absorbance spectra from 4000 to 400 cm^-1^ for 32 scans at a resolution of 4 cm^-1^ from each aliquot to characterize changes to bulk chemistry, and in particular, the loss of phosphate and carbonate functional groups over time. 
+We subtracted the background of each spectra by fitting a smoothed spline to several baseline points and smoothed each spectra slightly [@stuart2004] using a custom R script [@rcoreteam2021]. 
+Several indices have been proposed proposed to characterize the chemical-crystal properties of bone apatite and collagen (@tbl:indices). However most of these indices focus on characterizing the 
+
 We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry.
 We used Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^.
 We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material.
-Several indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices).
+A variety indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). @sponheimer1999 used 
+
 We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.
 
 
