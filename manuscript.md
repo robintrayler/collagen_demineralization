@@ -137,9 +137,7 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 
 # Discussion {#sec:discussion}
 
-this is a minor change.
 
-this is a conflict.
 
 # Supplementary Information {#sec:sup_info}
 
