@@ -5,8 +5,15 @@ smooth_spectra <- function(data) {
   #                                       y = absorbance))
   
   # f <- approxfun(x = spline$x, y = spline$y)
-  data <- data %>% mutate(absorbance = gaussian_smooth(x = wavenumber, 
+  data <- data %>% mutate(absorbance = gaussian_smooth(x = wavenumber,
                                                         y = absorbance,
                                                         winsize = 5))
+  
+  # data <- data %>% mutate(absorbance = ksmooth(x = wavenumber, 
+  #                                              y = absorbance, 
+  #                                              kernel = 'normal',
+  #                                              bandwidth = 0.001,
+  #                                              n.points = 5000)$)
   return(data)
 }
+

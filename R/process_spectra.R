@@ -8,6 +8,7 @@ theme_set(theme_classic())
 # source functions 
 source('./R/process_data.R')
 source('./R/plot_spectra.R')
+
 # read the data ---------------------------------------------------------------
 pb <- progress_bar$new(total = length(list.files(path = './data/goat_dentine/')))
 goat_data <- list.files(path = './data/goat_dentine/', full.names = TRUE) %>% 
@@ -53,9 +54,9 @@ shark_spectra <- shark_data %>%
   xlim(1900, 400)
 
 # save the plots for later
-pdf(file = './figures/all_spectra.pdf', width = 8, height = 6)
+# pdf(file = './figures/all_spectra.pdf', width = 8, height = 6)
 cowplot::plot_grid(goat_spectra, deer_spectra, shark_spectra, nrow = 1, align = 'v')
-dev.off()
+# dev.off()
 
 # calculate amide / phosphate ratios ------------------------------------------
 amide_phosphate_ratio <- function(data) {
