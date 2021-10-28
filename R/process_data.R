@@ -1,4 +1,5 @@
 process_data <- function(file_path) {
+  pb$tick()
   source('./R/fit_baseline.R')
   source('./R/normalize_height.R')
   source('./R/smooth_spectra.R')
@@ -6,8 +7,11 @@ process_data <- function(file_path) {
                             2050, 1950,
                             800, 750,
                             400, 350)
+  
   dat <- read_table(file = file_path, 
-                    col_names = FALSE) %>% 
+                    col_names = FALSE,
+                    progress = FALSE,
+                    col_types = cols()) %>% 
     rename('wavenumber' = X1,
            'absorbance' = X2) %>% 
     smooth_spectra() %>%

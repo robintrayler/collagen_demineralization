@@ -3,10 +3,12 @@ plot_spectra <- function(data, annotations, time_text, color, scale) {
     ggplot(mapping = aes(x = wavenumber,
                          y = factor(time_min),
                          height = absorbance,
-                         fill = file_name,
-                         color = file_name)) +
+                         group = file_name,
+                         fill = factor(time_min),
+                         color = factor(time_min))) +
     geom_density_ridges(stat = "identity",
-                        scale = scale) +
+                        scale = scale,
+                        size = 0.1) +
     theme(legend.position = 'none',
           panel.grid.minor = element_blank()) + 
     scale_color_viridis(discrete = TRUE, 
