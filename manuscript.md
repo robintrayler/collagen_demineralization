@@ -42,6 +42,10 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
+Extracting structural collagen from bioapatite (i.e., bone, dentine, tooth enamel) is one of the most common methods of inferring ecological information from modern and fossil animal remains [@clementz2012; @koch1994]. Bioapatite is a composite material with both mineral and organic components. The mineral component is usually hydroxylapatite or fluorapatite (Ca~4~(PO~4~)~3~(OH,F)) with carbonate (CO~3~] substitutions into either the phosphate (PO~4~) or hydroxyl (OH) sites [@driessens1990; @elliott2002]. The mineral portion of bioapatite is interwoven with a lattice of organic collagen fibers. While this organic content of tooth enamel is quite low (< 5%), tooth dentine and bone are ~10 - 25% collagen and extracting this collagen for stable isotope or radiocarbon analysis has become common.
+
+
+
 Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994].
 Bone is a composite material, made of both mineral and organic components. The mineral component is primarily of bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002].
 Dry bone is about 20 - 22wt% collagen which in turn is about 40% carbon and 15% nitrogen by weight[@ambrose1990; @vanklinken1999].
@@ -59,6 +63,8 @@ Our results provide a simple, viable method for extracting collagen from well pr
 Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
 # Background {#sec:background}
+## Fast Fourier Infrared Spectroscopy
+
 
 
 # Methods {#sec:methods}
@@ -133,7 +139,7 @@ We also analyzed several aliquots of a homogenized squid tissue as an in house r
 ![Stable isotope compositions for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/dentine_isotopes.pdf){#fig:isotopes width=50%}
 
 
-![ **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/ap_ratio_dentine.pdf){#fig:index width=50%}
+![Amide I - ν~2~PO~4~ ratios for all FTIR spectra.](./figures/ratio.pdf){#fig:index width=100%}
 
 # Discussion {#sec:discussion}
 
