@@ -73,8 +73,7 @@ deer_AP <- deer_ratio %>%
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
   ylim(0, 8) + 
   xlim(0, 125) +
-  ggtitle(expression(italic('Odocoileus virginianus'))) + 
-  geom_smooth()
+  ggtitle(expression(italic('Odocoileus virginianus')))
 
 shark_AP <- shark_ratio %>% 
   ggplot(mapping = aes(x = time, 
@@ -98,10 +97,10 @@ shark_AP <- shark_ratio %>%
   ggtitle(expression(italic('Prionace glauca')))
 
 
-# pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
+pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
 cowplot::plot_grid(goat_AP, 
                    deer_AP, 
                    shark_AP,
                    align = 'vh', 
                    nrow = 1)
-# dev.off()
+dev.off()
