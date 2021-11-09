@@ -44,20 +44,35 @@ header-includes:
 
 Extracting structural collagen from bioapatite (i.e., bone, dentine, tooth enamel) is one of the most common methods of inferring ecological information from modern and fossil animal remains [@clementz2012; @koch1994]. Bioapatite is a composite material with both mineral and organic components. The mineral component is usually hydroxylapatite or fluorapatite (Ca~4~(PO~4~)~3~(OH,F)) with carbonate (CO~3~] substitutions into either the phosphate (PO~4~) or hydroxyl (OH) sites [@driessens1990; @elliott2002]. The mineral portion of bioapatite is interwoven with a lattice of organic collagen fibers. While this organic content of tooth enamel is quite low (< 5%), tooth dentine and bone are ~10 - 25% collagen and extracting this collagen for stable isotope or radiocarbon analysis has become common.
 
-
-
 Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. Bone is a composite material, made of both mineral and organic components. The mineral component is primarily bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. Dry bone is about 20 - 22wt% collagen which in turn is about 40% carbon and 15% nitrogen by weight[@ambrose1990; @vanklinken1999]. Since collagen is relatively insoluble [@schwarcz1991] it persists in the fossil record for ~10^5^ years. Furthermore since the amino acid composition and elemental contents collagen are well understood and characterized [@ambrose1990; @szpak2011; @tuross1988; @tuross2002] it is reasonably straight forward to identify contaminants in collagen and remove them prior to analysis.
 
-Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002]and change one of these variable will inevitably lead to faster or slower mineral removal. Indeed, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010].
+Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002] and change one of these variable will inevitably lead to faster or slower mineral removal. However, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010] leading to ambiguity as to the best practices for mineral removal.
 
 In this study we do not attempt to resolve the optimal conditions for collagen extraction *per-se*, instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant. Our results provide a simple, viable method for extracting collagen from well preserved modern and fossil bone. Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
 # Background {#sec:background}
+
+## Collagen Extraction
+
 ## Fast Fourier Infrared Spectroscopy
 
+Fast Fourier Infrared Spectroscopy (FTIR) irradiates a sample with a beam of infrared light. Photons of infrared light excite molecules into a higher energy state, and as a result, some wavelengths are absorbed while others are transmitted through the material unaffected. Since the molecular structure of a material determines which wavelengths are absorbed or transmitted, FTIR can be used to used to semi-quantitatively measure the chemical composition of a material and different absorbance bands can be assigned to specific chemical functional groups [@stuart2004]. There has been considerable work using FTIR to investigate crystallographic and chemical changes to bioapatite and bone collagen during diagenesis [e.g., @grunenwald2014; @roche2010; @sonjuclasen1997; @sponheimer1999; @hassan1977], and as a result the band positions of the major chemical groups of these materials is well understood (@tbl:bands).
 
+|  band position (cm^-1^) | Chemical Group          | Reference                |
+|:-----------------------:|:-----------------------:|:------------------------:|
+| 1630                    | Amide I (CO–NH)         | @botta2012               |
+| 1551                    | Amide II (CO–NH)        | @botta2012               |
+| 1545                    | A-Type Carbonate (CO~3~)| [@legeros1991; @rey1991] |
+| 1415                    | B-Type Carbonate (CO~3~)| [@legeros1991; @rey1991] |
+| 1231                    | Amide III (CO–NH)       | @botta2012               |
+| 1020                    | Phosphate (ν~3~PO~4~)   |                          |
+| 880                     | Carbonate (CO~3~)       |                          |
+| 565                     | Phosphate (ν~2~PO~4~)   |                          |
+
+: Nominal FTIR band positions of several relevant chemical groups. {#tbl:bands}
 
 # Methods {#sec:methods}
+
 
 
 ## Sample Collection {#sec:methods_collection}
@@ -67,9 +82,13 @@ For shark teeth we homogenized several teeth from the same individual in order t
 
 ## Demineralization {#sec:methods_preparation}
 
+We treated aliquots of each bio
+
 We demineralized aliquots of each bioapatite (deer bone, goat and shark dentine) using 0.1M hydrochloric acid at 4°C. We demineralized in 5 minutes increments from 5 to 60 minutes and in 10 minute increments from 70 to 120 minutes. For each time step we weighed 2.5 - 3 mg of powdered bioapatite into 1.7 mL micro-centrifuge tubes and added 1 mL of 0.1M HCl. The bioapatite was then placed in a 4°C refrigerator for the specified amount of time. Five minutes before the specified amount of time, the samples were centrifuged for 5 minutes at 10,000 RPM and promptly rinsed using demonized water. for example, for the 60 minute time step, the samples spent 55 minutes in the refrigerator and the 5 minutes in the centrifuge for a total of 60 minutes in acid. After rising the samples were frozen and lyophilized prior to FTIR and stable isotope analysis.
 
 ## FTIR {#sec:methods_ftir}
+
+We collected infrared absorbance spectra from 400 to 4000 cm^-1^ for 32 scans at a resolution of 4 cm^-1^ from each aliquot to characterize changes to bulk chemistry. In particular, 
 
 We collected infrared absorbance spectra from 4000 to 400 cm^-1^ for 32 scans at a resolution of 4 cm^-1^ from each aliquot to characterize changes to bulk chemistry, and in particular, the loss of phosphate and carbonate functional groups over time. We subtracted the background of each spectra by fitting a smoothed spline to several baseline points and smoothed each spectra slightly [@stuart2004] using a custom R script [@rcoreteam2021]. Several indices have been proposed proposed to characterize the chemical-crystal properties of bone apatite and collagen (@tbl:indices). However most of these indices focus on characterizing the 
 
@@ -81,18 +100,6 @@ A variety indices have been proposed to characterize the crystal-chemical proper
 We the ratio of the amide 1  indices related to total carbonate and phosphate content as well as organic (collagen) content.
 
 
-|  band position (cm^-1^) |           Chemical Group            |    Reference    |
-|:-----------------------:|:-----------------------------------:|:---------------:|
-|          1630           |            Amide I (CO–NH)          |    @botta2012   |
-|          1551           |            Amide II (CO–NH)         |    @botta2012   |
-|          1545           |       A-Type Carbonate (CO~3~)      |                 |
-|          1415           |       B-Type Carbonate (CO~3~)      |                 |
-|          1231           |            Amide III (CO–NH)        |    @botta2012   |
-|          1020           |         Phosphate (ν~3~PO~4~)       |                 |
-|           880           |           Carbonate (CO~3~)         |                 |
-|           565           |         Phosphate (ν~2~PO~4~)       |                 |
-
-: Nominal FTIR band positions of several relevant chemical groups. {#tbl:bands}
 
 
 |          Index          |              Formula                |    Reference    |
