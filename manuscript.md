@@ -41,7 +41,7 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
-Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. Bone is a composite material, made of both mineral and organic components. The mineral component is primarily bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. Modern dry bone is about 20 - 30 wt% organic matter, while dentine is about 12 - 33 wt% organic [@driessens1990], which in turn is about 89% collagen [@ambrose1990; @driessens1990; @vanklinken1999]. Since collagen is relatively insoluble [@schwarcz1991] it can persist in the fossil record for ~10^5^ years [@clementz2012]. Furthermore, since the amino acid composition and elemental content (~40% carbon, ~15% nitrogen) are well characterized, it is reasonably straightforward to identify and remove contaminants in collagen prior to analysis [@ambrose1990; @szpak2011; @tuross2002; @tuross1988; @fuller2015]. However, since bioapatite contains ~ 5% structural carbonate [@elliot2002] there are two main reservoirs of carbon in bone. Furthermore, the carbon isotope fractionation between diet and collagen differ significantly from the fractionation between diet and structural carbonate [@passey2005]. This means that collagen must be isolated from the mineral component prior to analysis.
+Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. Bone is a composite material, made of both mineral and organic components. The mineral component is primarily bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate and hydroxyl sites [@elliott2002]. Modern dry bone is about 20 - 30 wt% organic matter, while dentine is about 12 - 33 wt% organic [@driessens1990], which in turn is about 89% collagen [@ambrose1990; @driessens1990; @vanklinken1999]. Since collagen is relatively insoluble [@schwarcz1991] it can persist in the fossil record for ~10^5^ years [@clementz2012]. Furthermore, since the amino acid composition and elemental content (~40% carbon, ~15% nitrogen) are well characterized, it is reasonably straightforward to identify and remove contaminants in collagen prior to analysis [@ambrose1990; @szpak2011; @tuross2002; @tuross1988; @fuller2015]. However, since bioapatite contains ~ 5% structural carbonate [@elliott2002] there are two main reservoirs of carbon in bone. Furthermore, the carbon isotope fractionation between diet and collagen differ significantly from the fractionation between diet and structural carbonate [@passey2005]. This means that collagen must be isolated from the mineral component prior to analysis.
 
 Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002] and change one of these variable will inevitably lead to faster or slower mineral removal. However, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010] leading to ambiguity as to the best practices for mineral removal.
 
@@ -72,6 +72,7 @@ Fast Fourier Infrared Spectroscopy (FTIR) irradiates a sample with a beam of inf
 
 # Methods {#sec:methods}
 
+![Diagram of methods.](./figures/workflow.pdf){#fig:worlflow width=100%}
 
 
 ## Sample Collection {#sec:methods_collection}
@@ -94,8 +95,8 @@ We used the ratio of the amide-I  indices related to total carbonate and phospha
 
 
 |          Index          |              Formula             |    Reference    |
-|:-----------------------:|:----------------------------- --:|:---------------:|
-|          *PCI*          |$\frac{B_{605}+B_{565}}{V_{590}}$ |@sponheimer1999  |
+|:-----------------------:|:--------------------------------:|:---------------:|
+|          *PCI*          |$\frac{B_{605}+B_{565}}{V_{590}}$ | @sponheimer1999 |
 |          *BPI*          |   $\frac{B_{1415}}{B_{605}}$     | @legeros1991    |
 |          *API*          |   $\frac{B_{1545}}{B_{605}}$     | @sponheimer1999 |
 |         *WAMPI*         |   $\frac{B_{1650}}{B_{605}}$     | @roche2010      |
