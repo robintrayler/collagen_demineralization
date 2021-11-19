@@ -10,7 +10,7 @@ author:
   - Sora L. Kim:
       institute: ['Department of Life and Environmental Sciences, University of California, Merced']
       email: skim380@ucmerced.edu
-bibliography: /Users/robintrayler/Zotero/ref_library.bib
+bibliography: ./manuscript_files/references.bib
 csl: /Users/robintrayler/Zotero/styles/geology.csl
 pdf-engine: xelatex
 mainfont: "Helvetica"

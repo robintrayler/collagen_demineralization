@@ -13,7 +13,7 @@ goat_data <- list.files(path = './data/goat_ABS/',
                         full.names = TRUE) %>% 
   map(process_spectra) %>% 
   reduce(rbind) %>% 
-  write_csv(file = './data/cleaned_spectra/goat_data.csv')
+  write_csv(file = './data/processed_spectra/goat_data.csv')
 
 # deer data
 pb <- progress_bar$new(
@@ -22,7 +22,7 @@ deer_data <- list.files(path = './data/deer_ABS/',
                         full.names = TRUE) %>% 
   map(process_spectra) %>% 
   reduce(rbind) %>% 
-  write_csv(file = './data/cleaned_spectra/deer_data.csv')
+  write_csv(file = './data/processed_spectra/deer_data.csv')
 
 # shark data
 pb <- progress_bar$new(
@@ -31,5 +31,5 @@ shark_data <- list.files(path = './data/shark_dentine/',
                          full.names = TRUE) %>%
   map(process_spectra) %>%
   reduce(rbind) %>% 
-  write_csv(file = './data/cleaned_spectra/shark_data.csv')
+  write_csv(file = './data/processed_spectra/shark_data.csv')
 
