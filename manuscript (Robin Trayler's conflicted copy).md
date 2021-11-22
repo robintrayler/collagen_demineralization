@@ -1,8 +1,15 @@
 ---
 title: Simple, Rapid Extraction of Collagen from Modern Bone
 author:
-  - Robin B. Trayler
-  - Sora L. Kim
+  - Robin B. Trayler:
+      institute: ['Department of Life and Environmental Sciences, University of California, Merced']
+      correspondence: "yes"
+      email: rtrayler@ucmerced.edu
+  - Pedro Valencia Landa:
+      institute: ['Department of Ecology and Evolutionary Biology, University of California, Santa Cruz']
+  - Sora L. Kim:
+      institute: ['Department of Life and Environmental Sciences, University of California, Merced']
+      email: skim380@ucmerced.edu
 bibliography: ./manuscript_files/references.bib
 csl: /Users/robintrayler/Zotero/styles/geology.csl
 pdf-engine: xelatex
@@ -38,7 +45,7 @@ Extracting bone collagen for stable isotope analysis is one of the most common m
 
 Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002] and change one of these variable will inevitably lead to faster or slower mineral removal. However, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010] leading to ambiguity as to the best practices for mineral removal.
 
-<!-- Note: dentine 12 - 33% organic, bone 20-30% organic. Organic content is ~89% collagen. so that means that dentine is ~10 - 29%, bone is 18 - 27% collagen -->
+<!-- Notes: dentine 12 - 33% organic, bone 20-30% organic. Organic content is ~89% collagen. so that means that dentine is ~10 - 29%, bone is 18 - 27% collagen -->
 
 In this study we do not attempt to resolve the optimal conditions for collagen extraction *per-se*, instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant. Our results provide a simple, viable method for extracting collagen from well preserved modern and fossil bone. Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
 
@@ -103,9 +110,10 @@ the δ^13^C and δ^15^N values and elemental carbon and nitrogen contents of all
 
 # Results {#sec:results}
 
-
-
 ![FTIR spectra for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE SPECTRA FOR ALL 3 MATERIALS**](./figures/all_spectra.pdf){#fig:spectra width=100%}
+
+
+![Stable isotope compositions for *Capra hircus* dentine and dental collagen. **EVENTUALLY THIS FIGURE WILL HAVE DATA FOR ALL 3 MATERIALS**](./figures/dentine_isotopes.pdf){#fig:isotopes width=50%}
 
 
 ![Amide I - ν~2~PO~4~ ratios for all FTIR spectra.](./figures/ratio.pdf){#fig:index width=100%}
