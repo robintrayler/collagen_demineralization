@@ -27,3 +27,6 @@ header-includes:
     - \linenumbers
     - \usepackage[font=small, skip=1pt]{caption}
 ---
+
+<!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc --lua-filter scholarly-metadata.lua --lua-filter author-info-blocks.lua -->
+

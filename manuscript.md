@@ -4,8 +4,7 @@ author:
   - Robin B. Trayler
   - Sora L. Kim
 bibliography: ./manuscript_files/references.bib
-csl: /Users/robintrayler/Zotero/styles/geology.csl
-pdf-engine: xelatex
+csl: ./manuscript_files/geology.csl
 mainfont: "Helvetica"
 geometry: margin=1.0in
 tblPrefix: Table
@@ -23,7 +22,7 @@ header-includes:
 
 # Notes
 
-<!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc --lua-filter scholarly-metadata.lua --lua-filter author-info-blocks.lua -->
+<!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc --number-sections -->
 
 ## References to include
 * @botta2012 - amide band positions
