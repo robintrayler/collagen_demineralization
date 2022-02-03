@@ -8,8 +8,9 @@ source('./R/functions/process_spectra.R')
 # read the data ---------------------------------------------------------------
 # goat data
 pb <- progress_bar$new(
-  total = length(list.files(path = './data/goat_ABS/')))
-goat_data <- list.files(path = './data/goat_ABS/', 
+  total = length(list.files(path = './data/goat_ATR/')))
+
+goat_data <- list.files(path = './data/goat_ATR/', 
                         full.names = TRUE) %>% 
   map(process_spectra) %>% 
   reduce(rbind) %>% 
@@ -17,8 +18,9 @@ goat_data <- list.files(path = './data/goat_ABS/',
 
 # deer data
 pb <- progress_bar$new(
-  total = length(list.files(path = './data/deer_ABS/')))
-deer_data <- list.files(path = './data/deer_ABS/', 
+  total = length(list.files(path = './data/deer_ATR/')))
+
+deer_data <- list.files(path = './data/deer_ATR/', 
                         full.names = TRUE) %>% 
   map(process_spectra) %>% 
   reduce(rbind) %>% 
@@ -27,6 +29,7 @@ deer_data <- list.files(path = './data/deer_ABS/',
 # shark data
 pb <- progress_bar$new(
   total = length(list.files(path = './data/shark_dentine/')))
+
 shark_data <- list.files(path = './data/shark_dentine/', 
                          full.names = TRUE) %>%
   map(process_spectra) %>%

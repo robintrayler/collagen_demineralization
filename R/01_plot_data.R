@@ -10,9 +10,9 @@ source('./R/functions/plot_spectra.R')
 theme_set(theme_classic())
 
 # load the data ---------------------------------------------------------------
-goat_data <- read.csv(file = './data/cleaned_spectra/goat_data.csv')
-deer_data <- read.csv(file = './data/cleaned_spectra/deer_data.csv')
-shark_data <- read.csv(file = './data/cleaned_spectra/shark_data.csv')
+goat_data <- read.csv(file = './data/processed_spectra/goat_data.csv')
+deer_data <- read.csv(file = './data/processed_spectra/deer_data.csv')
+shark_data <- read.csv(file = './data/processed_spectra/shark_data.csv')
 
 # plot the results ------------------------------------------------------------
 # data frame of FTIR absorbance band labels

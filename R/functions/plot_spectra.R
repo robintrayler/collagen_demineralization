@@ -1,4 +1,8 @@
-plot_spectra <- function(data, annotations, time_text, color, scale) {
+plot_spectra <- function(data, 
+                         annotations, 
+                         time_text, 
+                         color, 
+                         scale) {
   data %>% 
     ggplot(mapping = aes(x = wavenumber,
                          y = factor(time_min),

@@ -10,12 +10,11 @@ source('./R/functions/amide_phosphate_ratio.R')
 theme_set(theme_classic())
 
 # load the data ---------------------------------------------------------------
-goat_data <- read.csv(file = './data/cleaned_spectra/goat_data.csv')
-deer_data <- read.csv(file = './data/cleaned_spectra/deer_data.csv')
-shark_data <- read.csv(file = './data/cleaned_spectra/shark_data.csv')
+goat_data <- read.csv(file = './data/processed_spectra/goat_data.csv')
+deer_data <- read.csv(file = './data/processed_spectra/deer_data.csv')
+shark_data <- read.csv(file = './data/processed_spectra/shark_data.csv')
 
 # calculate amide / phosphate ratios ------------------------------------------
-
 # goat ratios
 goat_ratio <- goat_data %>% 
   group_by(file_name) %>% 
@@ -51,7 +50,7 @@ goat_AP <- goat_ratio %>%
                                  color = 'black')) +
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
-  ylim(0, 8) + 
+  ylim(0, 10) + 
   xlim(0, 125) + 
   ggtitle(expression(italic('Capra hircus')))
 
@@ -71,7 +70,7 @@ deer_AP <- deer_ratio %>%
                                  color = 'black')) +
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
-  ylim(0, 8) + 
+  ylim(0, 10) + 
   xlim(0, 125) +
   ggtitle(expression(italic('Odocoileus virginianus')))
 
@@ -97,10 +96,18 @@ shark_AP <- shark_ratio %>%
   ggtitle(expression(italic('Prionace glauca')))
 
 
-pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
-cowplot::plot_grid(goat_AP, 
-                   deer_AP, 
-                   shark_AP,
-                   align = 'vh', 
-                   nrow = 1)
-dev.off()
+# pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
+# cowplot::plot_grid(goat_AP, 
+#                    deer_AP, 
+#                    shark_AP,
+#                    align = 'vh', 
+#                    nrow = 1)
+# dev.off()
+
+
+
+
+plot(deer_ATR_ratio$AP, deer_ratio$AP)
+
+lm(deer_ratio$AP ~ deer_ATR_ratio$AP)
+
