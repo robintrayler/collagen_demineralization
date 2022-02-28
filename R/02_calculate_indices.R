@@ -91,23 +91,15 @@ shark_AP <- shark_ratio %>%
   ) +
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
-  ylim(0, 8) + 
+  ylim(0, 10) + 
   xlim(0, 125) + 
   ggtitle(expression(italic('Prionace glauca')))
 
 
-# pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
-# cowplot::plot_grid(goat_AP, 
-#                    deer_AP, 
-#                    shark_AP,
-#                    align = 'vh', 
-#                    nrow = 1)
-# dev.off()
-
-
-
-
-plot(deer_ATR_ratio$AP, deer_ratio$AP)
-
-lm(deer_ratio$AP ~ deer_ATR_ratio$AP)
-
+pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
+cowplot::plot_grid(goat_AP,
+                   deer_AP,
+                   shark_AP,
+                   align = 'vh',
+                   nrow = 1)
+dev.off()
