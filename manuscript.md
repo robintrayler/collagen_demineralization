@@ -20,9 +20,13 @@ header-includes:
     - \usepackage[font=small, skip=1pt]{caption}
 ---
 
-# Notes
-
 <!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc --number-sections -->
+
+# Notes
+* We collected measurements on time-series experiments to quantify changes during the demineralization process
+	* mineral loss, carbon and nitrogen gain or loss (deprotienation) isotopic changes
+* Develop metrics to evaluate the efficiency and quality of demineralization methods 
+* Develop simple tests that labs can do to evaluate their own in-house demineralization methods
 
 ## References to include
 * @botta2012 - amide band positions

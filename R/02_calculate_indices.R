@@ -103,3 +103,11 @@ cowplot::plot_grid(goat_AP,
                    align = 'vh',
                    nrow = 1)
 dev.off()
+
+
+
+write_csv(x = deer_ratio,
+          file = './data/deer_ratio.csv')
+
+
+

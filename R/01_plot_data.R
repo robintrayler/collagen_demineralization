@@ -2,6 +2,7 @@
 library(tidyverse) # data manipulation
 library(ggridges)  # plotting 
 library(viridis)   # colors 
+library(RColorBrewer)
 
 # source custom functions 
 source('./R/functions/plot_spectra.R')
@@ -28,17 +29,17 @@ annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
 
 # plot 
 goat_spectra <- goat_data %>% 
-  plot_spectra(annotations, color = 'magma', scale = 3) + 
+  plot_spectra(annotations, color = 'Reds', scale = 3) + 
   ggtitle(expression(italic('Capra hircus'))) + 
   xlim(1900, 400)
 
 deer_spectra <- deer_data %>% 
-  plot_spectra(annotations, color = 'viridis', scale = 3) + 
+  plot_spectra(annotations, color = 'Blues', scale = 3) + 
   ggtitle(expression(italic('Odocoileus virginianus'))) + 
   xlim(1900, 400)
 
 shark_spectra <- shark_data %>%
-  plot_spectra(annotations, color = 'mako', scale = 3) +
+  plot_spectra(annotations, color = 'Greens', scale = 3) +
   ggtitle(expression(italic('Prionace glauca'))) +
   xlim(1900, 400)
 
