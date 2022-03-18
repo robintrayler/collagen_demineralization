@@ -28,7 +28,7 @@ deer_data <- list.files(path = './data/deer_ATR/',
 
 # shark data
 pb <- progress_bar$new(
-  total = length(list.files(path = './data/shark_dentine/')))
+  total = length(list.files(path = './data/shark_ATR/')))
 
 shark_data <- list.files(path = './data/shark_dentine/', 
                          full.names = TRUE) %>%
