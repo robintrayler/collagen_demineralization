@@ -30,7 +30,7 @@ deer_data <- list.files(path = './data/deer_ATR/',
 pb <- progress_bar$new(
   total = length(list.files(path = './data/shark_ATR/')))
 
-shark_data <- list.files(path = './data/shark_dentine/', 
+shark_data <- list.files(path = './data/shark_ATR/', 
                          full.names = TRUE) %>%
   map(process_spectra) %>%
   reduce(rbind) %>% 

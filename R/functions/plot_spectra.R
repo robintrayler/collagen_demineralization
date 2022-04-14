@@ -1,29 +1,20 @@
 plot_spectra <- function(data, 
                          annotations, 
-                         time_text, 
-                         color, 
                          scale) {
   data %>% 
     ggplot(mapping = aes(x = wavenumber,
                          y = factor(time_min),
                          height = absorbance,
                          group = file_name,
-                         fill = (time_min),
-                         color = (time_min))) +
+                         fill = factor(time_min),
+                         # color = factor(time_min)
+                         )) +
     geom_density_ridges(stat = "identity",
                         scale = scale,
                         size = 0.1) +
     theme(legend.position = 'none',
           panel.grid.minor = element_blank()) + 
-    scale_color_viridis(discrete = FALSE, 
-                        option = color, 
-                        begin = 0.2,
-                        end = 0.8) + 
-    scale_fill_viridis(discrete = FALSE, 
-                       option = color, 
-                       begin = 0.2,
-                       end = 0.8,
-                       alpha = 0.25) + 
+    
     xlab(expression(wavenumber~'('~cm^{-1}~')')) + 
     ylab('time (minutes)') + 
     geom_segment(data = annotations,

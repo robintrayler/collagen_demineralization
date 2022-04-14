@@ -33,17 +33,21 @@ shark_ratio <- shark_data %>%
   do(amide_phosphate_ratio(.)) %>% 
   add_column(species = 'shark')
 
+all_ratios <- rbind(shark_ratio, 
+      deer_ratio, 
+      goat_ratio)
+
+write_csv(all_ratios, file = './data/ap_ratio.csv')
+
 # plot the results ------------------------------------------------------------
 goat_AP <- goat_ratio %>% 
   ggplot(mapping = aes(x = time, 
                        y = AP, 
-                       color = time)) + 
+                       color = factor(time))) + 
   geom_point(size = 3) +
-  scale_color_viridis(
-    option = 'magma',
-    begin = 0.2,
-    end = 0.8,
-    alpha = 0.75) +
+  scale_color_discrete_sequential(palette = 'Viridis',
+                                  rev = FALSE,
+                                  alpha = 0.75) + 
   theme(legend.position = 'none',
         axis.text = element_text(size = 8,
                                  family = 'Helvetica',
@@ -51,19 +55,25 @@ goat_AP <- goat_ratio %>%
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
   ylim(0, 10) + 
-  xlim(0, 125) + 
-  ggtitle(expression(italic('Capra hircus')))
+  ggtitle(expression(italic('Capra hircus'))) + 
+  scale_x_log10(breaks = c(5, 10, 15, 30, 60, 120, 1080, 1440),
+                labels = c('5 min', 
+                           '10 min',
+                           '15 min',
+                           '30 min', 
+                           '1 hr', 
+                           '2 hr', 
+                           '18 hr', 
+                           '24 hr'))
 
 deer_AP <- deer_ratio %>% 
   ggplot(mapping = aes(x = time, 
                        y = AP, 
-                       color = time)) + 
+                       color = factor(time))) + 
   geom_point(size = 3) +
-  scale_color_viridis(
-    option = 'viridis',
-    begin = 0.2,
-    end = 0.8,
-    alpha = 0.75) +
+  scale_color_discrete_sequential(palette = 'Plasma',
+                                  rev = FALSE,
+                                  alpha = 0.75) + 
   theme(legend.position = 'none',
         axis.text = element_text(size = 8,
                                  family = 'Helvetica',
@@ -71,19 +81,25 @@ deer_AP <- deer_ratio %>%
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
   ylim(0, 10) + 
-  xlim(0, 125) +
-  ggtitle(expression(italic('Odocoileus virginianus')))
+  ggtitle(expression(italic('Odocoileus virginianus'))) + 
+  scale_x_log10(breaks = c(5, 10, 15, 30, 60, 120, 1080, 1440),
+                labels = c('5 min', 
+                           '10 min',
+                           '15 min',
+                           '30 min', 
+                           '1 hr', 
+                           '2 hr', 
+                           '18 hr', 
+                           '24 hr'))
 
 shark_AP <- shark_ratio %>% 
   ggplot(mapping = aes(x = time, 
                        y = AP, 
-                       color = time)) + 
+                       color = factor(time))) + 
   geom_point(size = 3) +
-  scale_color_viridis(
-    option = 'mako',
-    begin = 0.2,
-    end = 0.8,
-    alpha = 0.75) +
+  scale_color_discrete_sequential(palette = 'Mako',
+                                  rev = FALSE,
+                                  alpha = 0.75) + 
   theme(legend.position = 'none',
         axis.text = element_text(size = 8,
                                  family = 'Helvetica',
@@ -92,22 +108,25 @@ shark_AP <- shark_ratio %>%
   xlab('time (minutes)') +
   ylab(expression(frac(Amide~I, nu[2]*PO[4]))) + 
   ylim(0, 10) + 
-  xlim(0, 125) + 
-  ggtitle(expression(italic('Prionace glauca')))
+  # xlim(0, 125) + 
+  ggtitle(expression(italic('Prionace glauca'))) + 
+  scale_x_log10(breaks = c(5, 10, 15, 30, 60, 120, 1080, 1440),
+                labels = c('5 min', 
+                           '10 min',
+                           '15 min',
+                           '30 min', 
+                           '1 hr', 
+                           '2 hr', 
+                           '18 hr', 
+                           '24 hr'))
 
 
-pdf(file = './figures/ratio.pdf', width = 7.5, height = 2.5)
+pdf(file = './figures/ratio.pdf', width = 6.5, height = 6)
 cowplot::plot_grid(goat_AP,
                    deer_AP,
                    shark_AP,
                    align = 'vh',
-                   nrow = 1)
+                   nrow = 3)
 dev.off()
-
-
-
-write_csv(x = deer_ratio,
-          file = './data/deer_ratio.csv')
-
 
 
