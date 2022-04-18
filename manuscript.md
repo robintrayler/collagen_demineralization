@@ -56,11 +56,11 @@ Fast Fourier Infrared Spectroscopy (FTIR) irradiates a sample with a beam of inf
 
 
 
-Several indices have been proposed to assess the quality and preservation of either the collagen or mineral components of bone (@tbl:indices). However many of these indices rely on regions where there is considerable overlap among organic and inorganic absorbance bands or where the index cannot be reliably calculated for both unaltered bone and fully demineralized collagen. For example the API and BPI indices are commonly used to quantify carbonate content bone and tooth enamel [@grunenwald2014; @roche2010; @sponheimer1999]. Calculating these indices relies on a reliable measurement of absorbance at wavenumber ~1020 cm^-1^, the location of the most prominent phosphate band. However, in fully demineralized collagen wavenumber ~1020 cm^-1^ is instead 
+Several indices have been proposed to assess the quality and preservation of either the collagen or mineral components of bone (@tbl:indices). However many of these indices rely on regions where there is considerable overlap among organic and inorganic absorbance bands or where the index cannot be reliably calculated for both unaltered bone and fully demineralized collagen. In particular, quantifying carbonate content or loss is complicated by the overlap among carbonate, phosphate and amide bands. For example the API and BPI indices are commonly used to quantify carbonate content bone and tooth enamel [@grunenwald2014; @roche2010; @sponheimer1999]. Calculating these indices relies on a reliable measurement of absorbance at wavenumber ~1020 cm^-1^, the location of the most prominent phosphate band. However, in fully demineralized collagen the wavenumber ~1020 cm^-1^ band is not well defined and overlaps the "shoulder" of the amide III peak at ~1231 wavenumber. Furthermore the A-type carbonate band almost perfectly overlaps the amide II band. So while carbonate removal is critical to accurate measurement of of the organic δ^13^C value of bone, it is difficult to directly quantify the relative amounts of carbonate and organic components. Instead we focus on quantifying the removal of the mineral phosphate groups. Since most carbonate is bound in the PO~4~ crystallographic site [@elliott1985; @elliot2002], phosphate loss should directly correspond the loss of carbonate groups. @roche2010 proposed the Water-Amide on Phosphate Index (WAMPI) to quantify organic content in fossil tooth enamel. @lebon2016 used essentially the same index to assess collagen quality in un-demineralized bone prior to radiocarbon analysis. 
 
 
 
- A variety indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). @sponheimer1999 used 
+
 
 We used the ratio of the amide-I  indices related to total carbonate and phosphate content as well as organic (collagen) content.
 
@@ -114,17 +114,6 @@ We collected ATR-FTIR spectra using a Bruker Vertex 70 Far-Infrared FTIR housed 
 We collected FTIR absorbance spectra from an aliquot at each time step to characterize changes to bulk chemistry. We used Bruker Vertex 70 Far-Infrared FTIR housed in the Nuclear Magnetic Resonance Facility at the University of California, Merced. We collected infrared absorbance spectra from 4000 cm^-1^ to 400 cm^-1^ for 32 scans at a resolution of 1 cm^-1^. We subtracted the background of each spectra by fitting a smoothed spline to several baseline points using a custom R script [@rcoreteam2021], which is included in the supplementary material. A variety indices have been proposed to characterize the crystal-chemical properties of bone apatite and collagen (@tbl:indices). @sponheimer1999 used 
 
 We used the ratio of the amide-I  indices related to total carbonate and phosphate content as well as organic (collagen) content.
-
-
-|         Index          |              Formula              |    Reference    |
-| :--------------------: | :-------------------------------: | :-------------: |
-|          PCI           | $\frac{B_{605}+B_{565}}{V_{590}}$ | @sponheimer1999 |
-|          BPI           |    $\frac{B_{1415}}{B_{605}}$     |  @legeros1991   |
-|          API           |    $\frac{B_{1545}}{B_{605}}$     | @sponheimer1999 |
-|         WAMPI          |    $\frac{B_{1650}}{B_{605}}$     |   @roche2010    |
-| $\frac{amide~1}{PO_4}$ |    $\frac{B_{1650}}{B_{1000}}$    |   @lebon2016    |
-
-: FTIR indices used in this study. *B* indicates the absorbance band height at the specified wavenumber, while *V* indicates the depth of the "valley". Since the maximum height of a particular absorbance band may not occur at exactly the reported wavenumber, we instead calculated the indices above using the local maxima or minima within ±15 cm^-1^. {#tbl:indices}
 
 ## Stable Isotope Analysis {#sec:methods_isotopes}
 

@@ -31,6 +31,8 @@ summary <- data %>%
     d15N_sd = sd(d15N_corrected, na.rm = TRUE),
     AP_mean = mean(AP, na.rm = TRUE),
     AP_sd = sd(AP, na.rm = TRUE),
+    C_mean = mean(C_wt_percent),
+    N_mean = mean(N_wt_percent),
     `C/N_mean` = mean(`C/N`, na.rm = TRUE),
     `C/N_sd` = sd(`C/N`, na.rm = TRUE),
     yield_mean = mean(yield, na.rm = TRUE),
@@ -293,3 +295,15 @@ cowplot::plot_grid(
 
 dev.off()
 
+
+
+
+summary %>% 
+  filter(time > 0) %>% 
+  ggplot(mapping = aes(x = C_mean, 
+                       y = AP_mean,
+                       color = genus)) + 
+  geom_point(show.legend = TRUE) + 
+  facet_grid(~genus) +
+  theme(legend.position = 'top') + 
+  theme_minimal()
