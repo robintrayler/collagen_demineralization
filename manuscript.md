@@ -38,15 +38,25 @@ header-includes:
 
 # Introduction {#sec:introduction}
 
-Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. Bone is a composite material, made of both mineral and organic components. The mineral component is primarily bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the phosphate (type-B CO~3~) and hydroxyl (type-A CO~3~) sites [@elliott2002]. Modern dry bone is about 20 - 30 wt% organic matter, while dentine is about 12 - 33 wt% organic [@driessens1990], which in turn is about 89% collagen [@ambrose1990; @driessens1990; @vanklinken1999]. Since collagen is relatively insoluble [@schwarcz1991] it can persist in the fossil record for ~10^5^ years [@clementz2012]. Furthermore, since the amino acid composition and elemental content (~40% carbon, ~15% nitrogen) are well characterized, it is reasonably straightforward to identify and remove contaminants in collagen prior to analysis [@ambrose1990; @szpak2011; @tuross2002; @tuross1988; @fuller2015]. However, since bioapatite contains ~ 5% structural carbonate [@elliott2002] there are two main reservoirs of carbon in bone. Furthermore, the carbon isotope fractionation between diet and collagen differ significantly from the fractionation between diet and structural carbonate [@passey2005]. This means that collagen must be isolated from the mineral component prior to analysis.
+Extracting bone collagen for stable isotope analysis is one of the most common methods for inferring ecological information from modern and fossil animals [@clementz2012; @koch1994]. Since collagen is relatively insoluble [@schwarcz1991] it can persist in the fossil record for ~10^5^ years [@clementz2012]. Furthermore, since the amino acid composition and elemental content (~40% carbon, ~15% nitrogen) are well characterized, it is reasonably straightforward to identify and remove contaminants in collagen prior to analysis [@ambrose1990; @szpak2011; @tuross2002; @tuross1988; @fuller2015]. However, since bioapatite contains ~ 5% structural carbonate [@elliott2002] there are two main reservoirs of carbon in bone. Furthermore, the carbon isotope fractionation between diet and collagen differ significantly from the fractionation between diet and structural carbonate [@passey2005]. This means that collagen must be isolated from the mineral component prior to analysis. 
 
 Isolating collagen for stable isotope analysis is usually accomplished via reaction with hydrochloric acid (HCl) to dissolve the mineral component. HCl protonates the carbonate and phosphate groups of the hydroxylapatite structure to form carbonic and phosphoric acid [@hankermeyer2002] which can then be decanted, leaving behind the residual collagen. This is sometimes followed by rinsing with sodium hydroxide (NaOH) to remove lipid and humic acid contaminants [@ambrose1990; @pestle2010; @brown1988; @longin1971]. The rate of mineral dissolution strongly depends on the acid concentration, temperature, the particle size [@hankermeyer2002] and change one of these variable will inevitably lead to faster or slower mineral removal. However, there is considerable variability in published methods for collagen extraction in reaction times, temperature, acid concentration, particle coarseness [@ambrose1990; @pestle2010] leading to ambiguity as to the best practices for mineral removal.
 
-<!-- Note: dentine 12 - 33% organic, bone 20-30% organic. Organic content is ~89% collagen. so that means that dentine is ~10 - 29%, bone is 18 - 27% collagen see [@driessens1990] -->
+<!-- Note: dentine 12 - 33% organic, bone 20-30% organic. Organic content is ~89% collagen. so that means that dentine is ~10 - 29% -->
 
-In this study we do not attempt to resolve the optimal conditions for collagen extraction *per-se*, instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant. Our results provide a simple, viable method for extracting collagen from well preserved modern and fossil bone. Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions.
+
+
+<!-- bone is 24 - 38% organic see  ~3.5% Carbonate (3.2  -13%) [@driessens1990] -->
+
+In this study we do not attempt to resolve the optimal conditions for collagen extraction *per-se*, instead, we focus only on evaluating one variable, the timing of mineral removal, while holding particle size, temperature, and acid concentration constant. Our results provide a simple, viable method for extracting collagen from well preserved modern and fossil bone. Furthermore, our methods provide a framework for evaluating the the efficacy of other collagen extraction methods at removing bone mineral under a variety of experimental conditions. 
 
 # Background {#sec:background}
+
+## Carbon Sources in Bone
+
+Bone and dentine are composite materials, with both mineral and organic components. Most importantly, both the mineral and the organic components contain carbon sources, which must be isolated prior to analysis. The mineral component is primarily bioapatite [Ca~5~(PO~4~)~3~OH] with carbonate (CO~3~) substitutions in the hydroxyl (type-A CO~3~) and phosphate (type-B CO~3~) crystallographic sites [@elliott1985; @elliott2002]. Bioapatite carbonate contents can vary considerably, with reported values ranging from 3 - 13% [@driessens1990]. Since carbonate is empirically 20% carbon, assuming an average carbonate content of about 5% [@sydney-zax1991; @zazzo2005; @driessens1990], means that bone is about 1% carbonate-bound carbon by weight (20% $\times$ 5%). Modern dry bone is about 20 - 30 wt% organic, while dentine is about 12-33% organic, which is in turn about 90% collagen [@ambrose1990; @driessens1990; @vanklinken1999]. Collagen carbon contents can vary significantly based on preservation, but average carbon contents in well preserved samples are ~35±8% [@ambrose1990; @vanklinken1999]. Therefore, an average bone is about 9%  (25% $\times$ 35%) collagen-bound carbon by weight. 
+
+Since the carbon isotope diet-to-tissue enrichment factors (ε) differ for mineral and organic phases, bulk stable isotope analysis of bone without isolating either component will result in δ^13^C values that represent a mixture of the two components. For example, mammalian herbivore bioapatite carbonate is enriched relative to diet by 11-14‰ depending on body size and gut physiology [@passey2005a], while collagen is enriched by about 5‰ [@ambrose1993]. Given the the average carbon contents of each phase (discussed above), bulk analysis of bone is expected to be enriched by 6‰ relative to diet. ($\frac{(diet + 14‰)\times 0.01 + (diet + 5‰) \times 0.09}{0.01 + 0.09} \approx diet +6‰$). Alternatively, bulk bone analyses δ^13^C values are expected to be enriched but 1‰ relative to purified collagen.
 
 ## Collagen Extraction
 
@@ -78,9 +88,6 @@ We used the ratio of the amide-I  indices related to total carbonate and phospha
 |           565           | Phosphate (ν~2~PO~4~)   |                          |
 
 : Nominal FTIR band positions of several relevant chemical groups. Actually band positions may be shifted by several cm^-1^. {#tbl:bands}
-
-
-
 
 
 |         Index          |              Formula              |    Reference    |
@@ -122,14 +129,44 @@ We used the ratio of the amide-I  indices related to total carbonate and phospha
 the δ^13^C and δ^15^N values and elemental carbon and nitrogen contents of all samples were measured using a Costech 4010 Elemental Analyzer coupled with a Delta V+ Isotope Ratio Mass Spectrometer housed in the Stable Isotope Ecosystem Laboratory at the University of California, Merced. Carbon and nitrogen isotope compositions were corrected for instrument drift, mass linearity, and standardized to the international VPDB and AIR scales using the USGS 40 and USGS 41a standard reference materials. Mean carbon and nitrogen isotope compositions were XXXXXX XXXXXX, XXXXX, XXXXX for USGS 40 and 41a, respectively. We also analyzed several aliquots of a homogenized squid tissue as an in house reference which returned δ^13^C and δ^15^N of YYYY and YYYY which are indistinguishable from the long-term average (ZZZZ).
 
 # Results {#sec:results}
-## Collagen Yields
-![Collagen yields at each time step for all samples.](./figures/yield.pdf){#fig:spectra width=100%}
+
+All data (FTIR spectra, elemental content, and stable isotope compositions) are available in the supplemental material and at [github.com/robintrayler/collagen_demineralization](https://github.com/robintrayler/collagen_demineralization). 
+
+## Collagen Yield and Quality
+
+The fractional weight remaining at each time step and C/N ratios for all samples are shown in @fig:yield. In general, all samples showed a rapid reduction in fractional weight after 5 minutes of acid treatment, followed by a prolonged period of weight loss until the fractional weight stabilized. We interpret the fractional weight remaining of this plateau as the final collagen yield. The *Capra* dentine sample weights stabilized after only 5 minutes for an average yield of 9.6±1.1%. The *Odocoileus* bone sample weights indicate a longer period of mineral removal, with sample weights stabilizing after 30 minutes, for a final yield of 18.6±2.6%. Finally, while the *Prionace* sample weights appear to plateau after about 30 minutes, the 18 and 24 hour time steps show a further reduction in sample weight suggesting that full mineral removal took between 2 and 18 hours, in this case. 
+
+All acid treated samples had C/N ratios with in the acceptable range for well preserved collagen (2.5 - 3.1 (wt/wt); @ambrose1990; @vanklinken1999). Untreated samples had higher C/N ratios in all cases, indicating the contribution of carbonate-bound carbon. 
+
+
+
+
+
+![Collagen yields at each time step for all samples.](./figures/yield.pdf){#fig:yield width=100%}
 
 ## FTIR Spectra
-![FTIR spectra for *Capra*, *Odocoileus*, and *Prionace* bioapatite and collagen. ](./figures/all_spectra.pdf){#fig:yield width=100%}
+
+Infrared spectra for all samples are shown in @fig:spectra. Untreated samples (0 minutes) show the expected spectra for collagen-bioapatite mixtures, with prominent absorbance bands for mineral (CO~3~: 880, 1415, 1545 cm^-1^; PO~4~: 565 1020 cm^-1^) and organic (amide I, II, III: 1231, 1551, 1630 cm^-1^) phases. As acid treatment time increased, the absorbance bands associated with structural phosphate and carbonate became less prominent, while the bands associated with organic content became more pronounced. While the 18 and 24 hour treatment groups returned the expected spectrum for pure collagen, in most cases the spectra 
+
+
+
+
+
+| band position (cm^-1^) |      Chemical Group      |       Reference        |
+| :--------------------: | :----------------------: | :--------------------: |
+|          1630          |     Amide I (CO–NH)      |       @botta2012       |
+|          1551          |     Amide II (CO–NH)     |       @botta2012       |
+|          1545          | A-Type Carbonate (CO~3~) | @legeros1991; @rey1991 |
+|          1415          | B-Type Carbonate (CO~3~) | @legeros1991; @rey1991 |
+|          1231          |    Amide III (CO–NH)     |       @botta2012       |
+|          1020          |  Phosphate (ν~3~PO~4~)   |                        |
+|          880           |    Carbonate (CO~3~)     |                        |
+|          565           |  Phosphate (ν~2~PO~4~)   |                        |
+
+![FTIR spectra for *Capra*, *Odocoileus*, and *Prionace* bioapatite and collagen. ](./figures/all_spectra.pdf){#fig:spectra width=100%}
 
 ## Stable Isotopes
-![Stable isotope data (A-C: δ^13^C;  D-F: δ^15^N) and FTIR index (G-I: Amide I / PO~4~) for all samples. Triangular points are 25°C experiments, circular points are 5°C experiments. Colored points with error bars are the mean ±2 standard deviations for each time step. In many cases the error bars are smaller than the symbol. The dashed grey lines on panels A - F indicate long-term ±2σ analytical reproducibility, centered on the data. The shaded grey band on panels G - H indicates the range of WAMPI values for 18 and 24 hours samples, which we interpret as the WAMPI for fully demineralized collagen.](./figures/isotope_data.pdf){#fig:index width=100%}
+![Stable isotope data (A-C: δ^13^C;  D-F: δ^15^N) and FTIR index (G-I: Amide I / PO~4~) for all samples. Triangular points are 25°C experiments, circular points are 5°C experiments. Colored points with error bars are the mean ±2 standard deviations for each time step. In many cases the error bars are smaller than the symbol. The dashed grey lines on panels A - F indicate long-term ±2σ analytical reproducibility, centered on the data. The shaded grey band on panels G - H indicates the range of WAMPI values for 18 and 24 hours samples, which we interpret as the WAMPI for fully demineralized collagen.](./figures/isotope_data.pdf){#fig:isotopes width=100%}
 
 # Discussion {#sec:discussion}
 
