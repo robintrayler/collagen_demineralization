@@ -46,7 +46,7 @@ annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
                        'nu[2]*PO[4]',     565,          22,        1,    22.0)
 
 # plot 
-goat_spectra <- goat_data %>% 
+goat_spectra <- goat_data |>
   plot_spectra(annotations, 
                scale = 3) + 
   scale_color_viridis(option = 'viridis',
@@ -59,7 +59,7 @@ goat_spectra <- goat_data %>%
   ggtitle(expression(italic('Capra hircus'))) + 
   xlim(1900, 400)
 
-deer_spectra <- deer_data %>% 
+deer_spectra <- deer_data |>  
   plot_spectra(annotations, scale = 3) + 
   scale_color_viridis(option = 'plasma',
                       discrete = TRUE,
@@ -71,7 +71,7 @@ deer_spectra <- deer_data %>%
   ggtitle(expression(italic('Odocoileus virginianus'))) + 
   xlim(1900, 400)
 
-shark_spectra <- shark_data %>%
+shark_spectra <- shark_data |> 
   plot_spectra(annotations, scale = 3) +
   scale_color_viridis(option = 'mako',
                       discrete = TRUE,

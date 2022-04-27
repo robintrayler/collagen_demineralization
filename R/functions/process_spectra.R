@@ -12,16 +12,17 @@ process_spectra <- function(file_path) {
   dat <- read_table(file = file_path, 
                     col_names = FALSE,
                     progress = FALSE,
-                    col_types = cols()) %>% 
+                    col_types = cols()) |> 
     rename('wavenumber' = X1,
-           'absorbance' = X2) %>% 
-    interpolate_spectra() %>% 
-    smooth_spectra() %>%
-    normalize_height(position = 1650, width = 20) %>%
-    fit_baseline(backgroud_positions = background_positions) %>%
+           'absorbance' = X2) |> 
+    interpolate_spectra() |> 
+    smooth_spectra() |> 
+    normalize_height(position = 1650, width = 20) |> 
+    fit_baseline(backgroud_positions = background_positions) |> 
     mutate(file_name = tools::file_path_sans_ext(basename(file_path)),
            time_min = str_split_fixed(basename(file_path), 
                                       pattern = "\\.", 
-                                      n = 4)[2] %>% as.numeric()) %>% 
-    return()
+                                      n = 4)[2] |> as.numeric())
+  
+    return(dat)
 }

@@ -29,8 +29,8 @@ fit_baseline <- function(data,
   # form interpolation function ---------------------------
   f <- approxfun(x = spline_fit$x, y = spline_fit$y)
   
-  data <- data %>% 
-    mutate(absorbance = absorbance - f(wavenumber)) %>% 
+  data <- data |> 
+    mutate(absorbance = absorbance - f(wavenumber))|> 
     mutate(absorbance = absorbance + abs(min(absorbance)))
   
   return(data)

@@ -38,6 +38,13 @@ summary <- data %>%
     yield_mean = mean(yield, na.rm = TRUE),
     yield_sd = sd(yield, na.rm = TRUE))
 
+
+summary %>% 
+  ggplot(mapping = aes(x = AP_mean, y   = C_mean, color = genus)) + 
+  geom_point() + 
+  theme_minimal() + 
+  geom_smooth(method = 'lm')
+
 # Deer Plots ##################################################################
 deer_carbon <- summary %>% 
   filter(genus == 'Odocoileus') %>% 
