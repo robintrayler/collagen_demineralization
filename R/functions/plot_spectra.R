@@ -7,7 +7,6 @@ plot_spectra <- function(data,
                          height = absorbance,
                          group = file_name,
                          fill = factor(time_min),
-                         # color = factor(time_min)
                          )) +
     geom_density_ridges(stat = "identity",
                         scale = scale,

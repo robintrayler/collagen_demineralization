@@ -43,7 +43,12 @@ annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
                        'amide~III',      1230,        22.5,        1,    22.0,
                        'nu[3]*PO[4]',    1020,        23.0,        1,    22.0,
                        'CO[3]',           870,          22,        1,    21.5,
-                       'nu[2]*PO[4]',     565,          22,        1,    22.0)
+                       'nu[2]*PO[4]',     565,          22,        1,    22.0,
+                       'lipid',           720,          22,        1,    22.0,
+                       'lipid',          1150,          22,        1,    22.0,
+                       'lipid',          1746,          22,        1,    22.0,
+                       'lipid',          2854,          22,        1,    22.0,
+                       'lipid',          2925,          22,        1,    22.0)
 
 # plot 
 goat_spectra <- goat_data |>
@@ -56,7 +61,7 @@ goat_spectra <- goat_data |>
                      discrete = TRUE,
                                  alpha = 0.4,
                      end = 0.8) + 
-  ggtitle(expression(italic('Capra hircus'))) + 
+  ggtitle(expression(italic('Capra hircus'))) #+ 
   xlim(1900, 400)
 
 deer_spectra <- deer_data |>  
@@ -68,7 +73,7 @@ deer_spectra <- deer_data |>
                      discrete = TRUE,
                      alpha = 0.4,
                      end = 0.8) + 
-  ggtitle(expression(italic('Odocoileus virginianus'))) + 
+  ggtitle(expression(italic('Odocoileus virginianus'))) #+ 
   xlim(1900, 400)
 
 shark_spectra <- shark_data |> 
@@ -80,7 +85,7 @@ shark_spectra <- shark_data |>
                      discrete = TRUE,
                      alpha = 0.4,
                      end = 0.8) + 
-  ggtitle(expression(italic('Prionace glauca'))) +
+  ggtitle(expression(italic('Prionace glauca'))) #+
   xlim(1900, 400)
 
 # save the plots for later

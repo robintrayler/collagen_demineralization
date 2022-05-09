@@ -6,7 +6,7 @@ process_spectra <- function(file_path) {
   source('./R/functions/interpolate_spectra.R')
   background_positions <- c(4000, 3950, # must be in high - low, high-low order
                             2050, 1950,
-                            800, 750,
+                            800, 775,
                             400, 350)
   
   dat <- read_table(file = file_path, 
