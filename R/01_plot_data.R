@@ -48,7 +48,9 @@ annotations <- tribble(~label,          ~wavenumber, ~label_pos, ~bottom, ~top,
                        'lipid',          1150,          22,        1,    22.0,
                        'lipid',          1746,          22,        1,    22.0,
                        'lipid',          2854,          22,        1,    22.0,
-                       'lipid',          2925,          22,        1,    22.0)
+                       'lipid',          2925,          22,        1,    22.0,
+                       'lipid',          1150,          22,        1,    22.0,
+                       'lipid',           720,          22,        1,    22.0)
 
 # plot 
 goat_spectra <- goat_data |>
