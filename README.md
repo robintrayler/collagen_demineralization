@@ -15,7 +15,7 @@ This repository contains the data, code, and manuscript for a project looking at
 ├── R                     # R scripts to be run in numerical order 0 - 3
     └── functions         # data processing functions 
 ├── figures               # output directory for pdf figures
-├── manuscript.md         # pandco markdown formatted manuscript
+├── manuscript.md         # pandoc markdown formatted manuscript
 ├── manuscript_files      # files required for manuscript compiling
 └── README.md
 
