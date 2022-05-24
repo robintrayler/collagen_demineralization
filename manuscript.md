@@ -4,11 +4,11 @@ author:
   - Robin B. Trayler
   - Pedro Valencia Landa
   - Sora L. Kim
-bibliography: ./bibtex.bib
-csl: ./rapid-communications-in-mass-spectrometry.csl
 mainfont: "Baskerville"
 fontsize: 12pt
 geometry: margin=1.0in
+bibliography: ./bibtex.bib
+csl: ./rapid-communications-in-mass-spectrometry.csl
 tblPrefix: Table
 figPrefix: Figure
 secPrefix: Section
