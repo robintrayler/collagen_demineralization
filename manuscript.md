@@ -12,7 +12,6 @@ csl: ./rapid-communications-in-mass-spectrometry.csl
 tblPrefix: Table
 figPrefix: Figure
 secPrefix: Section
-link-citations: true
 indent: true
 header-includes:
     - \usepackage{lineno}
@@ -21,11 +20,11 @@ header-includes:
     - \doublespacing
 ---
 
-<!-- this is a comment -->
-
 <!-- this will complete the manuscript using pandoc -->
+<!-- PDF --> 
 <!-- pandoc -s manuscript.md -o manuscript.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc --number-sections -->
 
+<!-- PDF --> 
 <!-- pandoc -s manuscript.md -o manuscript.docx --pdf-engine=xelatex --filter pandoc-crossref --citeproc --number-sections --reference-doc=reference.docx -->
 
 # Rationale {.unnumbered}
