@@ -153,7 +153,7 @@ The need for mineral removal in our shark teeth is less clear. There is no obvio
 
 Our methods (@fig:workflow) provide a framework for evaluating mineral removal from bone and dentine. While most demineralization methods use similar techniques, the details can vary among laboratories which can lead to significant differences in stable isotope compositions [@pestle2014]. However, there is not a clear best method. Conversely, bone with different preservation characteristics may require different treatments to successfully isolate collagen [@pestle2014; @fuller2014; @tuross1988]. Our results show that a combination of stable isotope analysis, elemental analysis, and FTIR can be used to track mineral removal and structural changes to bone and collagen over the course of hours. Varying the reaction temperature, acid concentration, particle size, and or reaction time of our experiments would likely produce different results inasmuch as mineral removal would be faster or slower. However our methods show that it is possible to quantify the effects of changes to one of these variables and assess method efficacy and the quality of the the resulting collagen.
 
-Finally, these methods can be extended quantify the effects of other treatments.   For example, while we did not attempt to remove lipids for our experiments they can be significant source of excess carbon in many materials and a variety of techniques are used to remove lipids prior to analysis [@post2007]. Lipid functional groups produce distinct absorbance bands in infrared spectra [@liden1995] which can be used to quantify their presence, allowing for the evaluation of lipid removal. Other exogenous contaminants (e.g., humic acids, labile carbonates) are also visible using infrared spectroscopy [@delia2007] and our workflow could likewise be used to check for the removal of these compounds. 
+Finally, these methods can be extended quantify the effects of other treatments.   For example, while we did not attempt to remove lipids for our experiments they can be significant source of excess carbon in many materials and a variety of techniques are used to remove lipids prior to analysis [@post2007]. Lipid functional groups produce distinct absorbance bands in infrared spectra [@liden1995] which can be used to quantify their presence, allowing for the evaluation of lipid removal. Other exogenous contaminants (e.g., humic acids, labile carbonates) are also visible using infrared spectroscopy [@delia2007] and our workflow could likewise be used to check for the removal of these compounds.
 
 # Conclusions {#sec:conclusions}
 
@@ -161,7 +161,7 @@ Finally, these methods can be extended quantify the effects of other treatments.
 
 # Supplementary Information {#sec:sup_info}
 
-All infrared spectra, stable isotope data, analysis code, and a draft version of this manuscript are available on at [github.com/robintrayler/collagen_demineralization](https://github.com/robintrayler/collagen_demineralization)
+All infrared spectra, stable isotope data, and analysis code,  are available on at [github.com/robintrayler/collagen_demineralization](https://github.com/robintrayler/collagen_demineralization)
 
 # Acknowledgments
 We thank Maya Morris for her help with time step experiments and Dr. David Rice for  his assisting with FTIR data collection. We also thank Gina Palefsky for providing the *Odocoileus* bone and Matthew J. Kohn for providing the *Capra* tooth.
