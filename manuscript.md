@@ -27,7 +27,7 @@ header-includes:
 <!-- word --> 
 <!-- pandoc -s manuscript.md -o manuscript.docx --pdf-engine=xelatex --filter pandoc-crossref --citeproc --number-sections --reference-doc=reference.docx -->
 
-In preparation for submission to The *Journal of Archaeological Sciences*
+In preparation for submission to *The Journal of Archaeological Sciences*
 
 # Abstract {.unnumbered}
 

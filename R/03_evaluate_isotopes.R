@@ -34,17 +34,11 @@ summary <- data %>%
     AP_sd = sd(AP, na.rm = TRUE),
     C_mean = mean(C_wt_percent),
     N_mean = mean(N_wt_percent),
-    `C/N_mean` = mean(`C/N`, na.rm = TRUE),
-    `C/N_sd` = sd(`C/N`, na.rm = TRUE),
+    `C/N_mean` = mean(`C:N_atomic`, na.rm = TRUE),
+    `C/N_sd` = sd(`C:N_atomic`, na.rm = TRUE),
     yield_mean = mean(yield, na.rm = TRUE),
     yield_sd = sd(yield, na.rm = TRUE))
 
-
-summary %>% 
-  ggplot(mapping = aes(x = AP_mean, y   = C_mean, color = genus)) + 
-  geom_point() + 
-  theme_minimal() + 
-  geom_smooth(method = 'lm')
 
 # Deer Plots ##################################################################
 deer_carbon <- summary %>% 
