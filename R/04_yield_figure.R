@@ -12,6 +12,12 @@ data <- read_csv(file = './data/ap_ratio.csv') %>%
   select(AP, file_name) %>% 
   full_join(data, by = 'file_name')
 
+change_points <- read_csv(file = './data/change_points.csv') 
+
+change_points %>% 
+  pivot_wider(names_from = 'param', values_from = c('mean')) %>% 
+  view()
+
 # summarize data --------------------------------------------------------------
 summary <- data %>% 
   group_by(time, genus, temperature) %>%
@@ -45,10 +51,10 @@ theme_set(theme_classic() +
                   panel.grid.minor.x = element_blank(),
                   panel.margin = margin(t = 1, r = 0, b = 0, l = 0, unit = 'pt')))
 
-
 # plot the data ---------------------------------------------------------------
 
 # goat data -------------------------------------------------------------------
+
 goat_yield <- summary %>% 
   filter(genus == 'Capra') %>% 
   ggplot(mapping = aes(x = time, 
@@ -72,7 +78,12 @@ goat_yield <- summary %>%
                            '1 hr', 
                            '2 hr', 
                            '18 hr', 
-                           '24 hr'))
+                           '24 hr')) + 
+  geom_linerange(data = goat_changes,
+               mapping = aes(xmin = changepoints[1],
+                             xmax = changepoints[2],
+                             y = yield_mean[1] * 100),
+               inherit.aes = FALSE)
 
 goat_C <- summary %>% 
   filter(genus == 'Capra') %>% 
