@@ -162,7 +162,7 @@ Removing the mineral component of bone and dentine prior to stable isotope analy
 All infrared spectra, stable isotope data, and analysis code, are available at [github.com/robintrayler/collagen_demineralization](https://github.com/robintrayler/collagen_demineralization)
 
 # Acknowledgments
-We thank Maya Morris for her help with time step experiments and Dr. David Rice for his assistance with FTIR data collection. We also thank Gina Palefsky for providing the *Odocoileus* bone and Matthew J. Kohn for providing the *Capra* tooth. Discussions with Linda Reynard also improved this paper. This work was supported by NSF-EAR-1830480 and UC Merced startup funds to SLK. 
+We thank Maya Morris for her help with time step experiments and Dr. David Rice for his assistance with FTIR data collection. We also thank Gina Palefsky for providing the *Odocoileus* bone and Matthew J. Kohn for providing the *Capra* tooth. This work was supported by NSF-EAR-1830480 and UC Merced startup funds to SLK. 
 
 \pagebreak
 
