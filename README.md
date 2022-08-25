@@ -7,12 +7,12 @@ This repository contains the data, code, and manuscript for a project looking at
 ```
 .
 ├── data
-    └── deer_ABS          # raw deer data 
-    └── goat_ABS          # raw goat data
-    └── shark_ABS         # raw shark data
+    └── deer_ATR          # raw deer data 
+    └── goat_ATR          # raw goat data
+    └── shark_ART         # raw shark data
     └── isotope_data      # stable isotope data
     └── processed_spectra # post processed FTIR spectra 
-├── R                     # R scripts to be run in numerical order 0 - 3
+├── R                     # R scripts to be run in numerical order 0 - 4
     └── functions         # data processing functions 
 ├── figures               # output directory for pdf figures
 ├── manuscript.md         # pandoc markdown formatted manuscript
