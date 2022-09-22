@@ -3,6 +3,8 @@
 .RData
 .Ruserdata
 data/.DS_Store
+*.DS_Store
+figures/.DS_Store
 *.afdesign
 missfont.log
 *.docx
