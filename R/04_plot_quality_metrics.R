@@ -5,8 +5,7 @@ library(viridis)
 data <- read_csv(file = './data/isotope_data/isotope_data.csv') %>% 
   mutate(yield = sample_wt_final/sample_wt_initial * 100) %>% 
   rename(file_name = sample) %>% 
-  filter(!is.na(time)) %>% 
-  filter(temperature < 10)
+  filter(!is.na(time))
 
 data <- read_csv(file = './data/ap_ratio.csv') %>% 
   select(AP, file_name) %>% 

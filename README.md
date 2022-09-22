@@ -16,9 +16,7 @@ This repository contains the data, code, and manuscript for a project looking at
     └── functions         # data processing functions 
 ├── figures               # output directory for pdf figures
 ├── manuscript.md         # pandoc markdown formatted manuscript
-├── manuscript_files      # files required for manuscript compiling
 └── README.md
-
 ```
 
 ## Manuscript

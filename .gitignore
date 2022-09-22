@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-pandoc.md
 data/.DS_Store
 *.afdesign
 missfont.log
