@@ -353,7 +353,6 @@ shark_cn <- summary %>%
                            '18 hr', 
                            '24 hr'))
 
-
 # write the results to a pdf --------------------------------------------------
 pdf(file = './figures/yield.pdf', width = 6.5, height = 7.5)
 cowplot::plot_grid(
