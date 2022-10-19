@@ -4,7 +4,7 @@ author:
   - Robin B. Trayler
   - Pedro Valencia Landa
   - Sora L. Kim
-mainfont: "Baskerville"
+mainfont: "Helvetica"
 fontsize: 12pt
 geometry: margin=1.0in
 bibliography: ./bibtex.bib
