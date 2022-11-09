@@ -113,11 +113,11 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 * This is a nice short study on the need for mineral removal before collagen analysis and fits into the larger ecosystem of testing what we think we know about stable isotope analysis, with recent papers on quality control, body size effects, and the effects of bone turnover. The authors set up the study well and used varied materials of interest to the question at hand. The resulting quick demineralization of most samples was interesting as I was expecting a weak HCl solution to slow down the demineralization time. I did appreciate the easy to read graphics, which can be difficult in papers like these with multiple samples from multiple individuals and varied treatments. 
 
-* **Wondering if it should be stated a bit more clearly that perhaps the slow reaction time in Prionace teeth was due to the high mineral content of teeth?** 
+* Wondering if it should be stated a bit more clearly that perhaps the slow reaction time in Prionace teeth was due to the high mineral content of teeth? 
 
 > We have added a two sentences to the end of section 5.2 explicitly states we view the mineral content and lower solubility as the reason for slower demineralization of the shark teeth. 
 
->> In contrast to mammals, shark bioapatite is primarily fluorapatite [Ca5(PO4)F], has overall lower CO3 contents, and is less soluble (Posner et al., 1984). As a result of homogenizing whole teeth, Our Prionace samples also have a higher mineral content, which likely explains the slower demineralization of these samples.  
+>> In contrast to mammals, shark bioapatite is primarily fluorapatite [Ca~5~(PO~4~)F], has overall lower CO3 contents, and is less soluble [@posner1984]. As a result of homogenizing whole teeth, Our Prionace samples also have a higher mineral content, which likely explains the slower demineralization of these samples.  
 
 * I would publish with minor revisions, as this paper quite nicely shows the necessary step of removing mineral from collagen.
 
