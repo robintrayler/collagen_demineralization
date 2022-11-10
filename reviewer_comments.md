@@ -1,3 +1,32 @@
+---
+title: "Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy - Response to Reviewers"
+author:
+  - Robin B. Trayler
+  - Pedro Valencia Landa
+  - Sora L. Kim
+mainfont: "Helvetica"
+fontsize: 12pt
+geometry: margin=1.0in
+bibliography: ./bibtex.bib
+csl: ./journal-of-archaeological-science.csl
+tblPrefix: Table
+figPrefix: Figure
+secPrefix: Section
+indent: true
+header-includes:
+    - \usepackage{lineno}
+    - \linenumbers
+    - \usepackage{setspace}
+    - \doublespacing
+---
+
+<!-- this will complete the manuscript using pandoc -->
+<!-- PDF --> 
+<!-- pandoc -s reviewer_comments.md -o reviewer_comments.pdf --pdf-engine=xelatex --filter pandoc-crossref --citeproc -->
+
+<!-- word --> 
+<!-- pandoc -s reviewer_comments.md -o reviewer_comments.docx --filter pandoc-crossref --citeproc --reference-doc=reference.docx -->
+
 # Comments from the editors 
 
 * The submitted manuscript by Trayler et al. provides a valuable contribution to methodological considerations in stable isotope analysis; I concur with both reviewers that following modest revisions, this paper is a suitable contribution to JAS and more broadly to isotope bioarchaeology/zooarchaeology.
@@ -13,11 +42,11 @@
 
 * A more extensive literature review should be included that minimally covers how FTIR has been used to examine collagen and mineral properties. I realize most of the literature is about diagenesis (not sample treatment times and efficacy) but some discussion is warranted. 
 
-> We have expanded section 3.3 "Fast Fourier Infrared Spectroscopy" to include more discussion of the past used of FTIR on bone and collagen in archaeological and paleontological contexts including investigating changes to bioapatite carbonate, crystallinity, organic content, as well as as a screening tool for radiocarbon and ancient DNA analysis. 
+> We have expanded section 2.3 "Fast Fourier Infrared Spectroscopy" to include more discussion of the past used of FTIR on bone and collagen in archaeological and paleontological contexts including investigating changes to bioapatite carbonate, crystallinity, organic content, as well as as a screening tool for radiocarbon and ancient DNA analysis. 
 
 * There are also other methods that have been used to determine whether samples are still reacting with HCl as an indication of demineralization. This should be discussed as well.
 
-> We have added some discussion of how previous studies have assessed the completeness of demineralization to section 3.2. Our understanding is that most stable isotope and radiocarbon studies of collagen have used qualitative metrics to assess the degree of demineralization that look for some combination of the cessation of bubbling from CO~2~ release, the "squishiness" of the bone pieces, and the visual appearance of a translucent collagen pseudomorph. For example:
+> We have added some discussion of how previous studies have assessed the completeness of demineralization to section 2.2. Our understanding is that most stable isotope and radiocarbon studies of collagen have used qualitative metrics to assess the degree of demineralization that look for some combination of the cessation of bubbling from CO~2~ release, the "squishiness" of the bone pieces, and the visual appearance of a translucent collagen pseudomorph. For example:
 
 >> Decalcification was determined by the flexibility and translucence of the sample and lack of effervescence. [@sealy2014]
 
@@ -30,7 +59,7 @@
 ## Minor comments
 * Abstract (page 1): SIA of bone and dentinal collagen is more commonly used on more recent archaeological remains (human and nonhuman fauna) than on extinct human and animal remains (where collagen preservation is more variable). I would rephrase this sentence to reflect this.
 
-> We do not feel that stable isotope analysis on extinct taxa is rare. Yes, collagen isotope extraction is easier, and therefore more common, when working with more recent archaeological remains but it not uncommon with older material. Collagen isotope analysis is routinely used on Late Pleistocene fossils [@coltrain2004; @fox-dobbs2008; @fox-dobbs2006; @fox-dobbs2005; @landry2021; @fuller2020] including extinct human species [@BOCHERENS1991481; @bocherens2009]. Furthermore, *extinct* does not necessarily imply pre-Holocene and many recently extinct faunas have been investigated using stable isotope analysis of collagen including lemurs [@crowley2011], Moas [@rawlence2016], and giant tortoises [@vandersluis2014]. 
+> We do not feel that stable isotope analysis on extinct taxa is rare. Yes, collagen isotope extraction is easier, and therefore more common, when working with more recent archaeological remains but it not uncommon with older material. Collagen isotope analysis is routinely used on Late Pleistocene fossils [@coltrain2004; @fox-dobbs2008; @fox-dobbs2006; @fox-dobbs2005; @landry2021; @fuller2020] including extinct human species [@bocherens2005; @bocherens2009]. Furthermore, *extinct* does not necessarily imply pre-Holocene and many recently extinct faunas have been investigated using stable isotope analysis of collagen including lemurs [@crowley2011], Moas [@rawlence2016], and giant tortoises [@vandersluis2014]. 
   
 * Line 20: remove second "of" after "efficacy-of"
 
@@ -46,7 +75,7 @@
 
 * Introduction (page 3: lines 58-60): It's unclear why results are being presented already in the Introduction section. Most of "Page 3" is really Materials and Methods and seems out of place here.
 
-> 
+> We have moved some of the details of collagen extraction (lines ~42-45 in the submission manuscript) to the background section. We would prefer to keep the brief discussion of our results at the end of the introduction. we feel that summarizing the major points a a study early in the manuscript is a common technique to help orient a reader. 
 
 * Elemental Composition of Bone (page 5: line 96): "collagen" is misspelled
 
@@ -70,7 +99,7 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 * Collagen Extraction (page 7: lines 143-152): I recommend reading and citing this recent paper on C:N ratios (Schwarcz, Henry P., and Harmeet Nahal. "Theoretical and observed C/N ratios in human bone collagen." Journal of Archaeological Science 131 (2021): 105396.); 
 
-> We have added a citation and short discussion of this paper to the last paragraph of section 3.2
+> We have added a citation and short discussion of this paper to the last paragraph of section 2.2
 
 * Line 158: remove comma after "quantitatively"
 
@@ -115,7 +144,7 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 * Wondering if it should be stated a bit more clearly that perhaps the slow reaction time in Prionace teeth was due to the high mineral content of teeth? 
 
-> We have added a two sentences to the end of section 5.2 explicitly states we view the mineral content and lower solubility as the reason for slower demineralization of the shark teeth. 
+> We have added a two sentences to the end of section 4.2 explicitly states we view the mineral content and lower solubility as the reason for slower demineralization of the shark teeth. 
 
 >> In contrast to mammals, shark bioapatite is primarily fluorapatite [Ca~5~(PO~4~)F], has overall lower CO3 contents, and is less soluble [@posner1984]. As a result of homogenizing whole teeth, Our Prionace samples also have a higher mineral content, which likely explains the slower demineralization of these samples.  
 
@@ -133,3 +162,9 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 * Line 392: coarse instead of course
 
 > Fixed
+
+\pagebreak
+
+# References {.unnumbered}
+:::{#refs}
+:::
