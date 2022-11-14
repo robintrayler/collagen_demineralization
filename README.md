@@ -1,6 +1,6 @@
-# Collagen Demineralization
+# Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy
 
-This repository contains the data, code, and manuscript for a project looking at the systematics of collagen extraction from bone using FTIR and stable isotope analysis.
+This repository contains the data, code, and manuscript for **Trayler, R. B., Valencia Landa, P., Kim, S. L., (in review) *Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy*, Journal of Archaeological Science** 
 
 ## File Structure 
 
@@ -16,6 +16,7 @@ This repository contains the data, code, and manuscript for a project looking at
     └── functions         # data processing functions 
 ├── figures               # output directory for pdf figures
 ├── manuscript.md         # pandoc markdown formatted manuscript
+├── reviewer_comments.md  # pandoc markdown formatted responce to reviwers
 └── README.md
 ```
 
