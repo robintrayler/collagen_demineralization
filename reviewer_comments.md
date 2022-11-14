@@ -38,11 +38,11 @@ header-includes:
 
 * The main concerns regarding the manuscript is that there are only three samples used and they are all different taxa. A larger sample size would provide more robust results and confidence in the conclusions. However, I understand that the authors were more interesting in showing these data as proof of concept.
 
-> The reviewer is correct that our sample sample size is small. We also agree that this study serves as a proof of concept for method testing and development and not as a comprehensive review of collagen isolation across taxonomic groups.
+> The reviewer is correct that our study serves as a proof-of-concept, and that taxonomically our sample size is small. However we note that our overall sample size is 189 stable isotope analyses and 189 FTIR analyses for a total of 378 analyses which we feel is a quite detailed investigation. We carefully selected materials of interest to archaeologists and paleontologists including mammalian dentine, bone, and shark fluorapatite enameloid.
 
 * A more extensive literature review should be included that minimally covers how FTIR has been used to examine collagen and mineral properties. I realize most of the literature is about diagenesis (not sample treatment times and efficacy) but some discussion is warranted. 
 
-> We have expanded section 2.3 "Fast Fourier Infrared Spectroscopy" to include more discussion of the past used of FTIR on bone and collagen in archaeological and paleontological contexts including investigating changes to bioapatite carbonate, crystallinity, organic content, as well as as a screening tool for radiocarbon and ancient DNA analysis. 
+> We have expanded section 2.3 "Fast Fourier Infrared Spectroscopy" to include more discussion of the past used of FTIR on bone and collagen in archaeological and paleontological contexts including investigations to changes in bioapatite carbonate, crystallinity, organic content, as well as as a screening tool for radiocarbon and ancient DNA analysis. 
 
 * There are also other methods that have been used to determine whether samples are still reacting with HCl as an indication of demineralization. This should be discussed as well.
 
@@ -56,10 +56,12 @@ header-includes:
 
 >> *"After all mineral had been removed, as evidenced by a translucent pale yellow collagen replica, the residue was washed 15 times ..."* [@tuross1988]
 
+> We welcome additional references or citations to include. 
+
 ## Minor comments
 * Abstract (page 1): SIA of bone and dentinal collagen is more commonly used on more recent archaeological remains (human and nonhuman fauna) than on extinct human and animal remains (where collagen preservation is more variable). I would rephrase this sentence to reflect this.
 
-> We do not feel that stable isotope analysis on extinct taxa is rare. Yes, collagen isotope extraction is easier, and therefore more common, when working with more recent archaeological remains but it not uncommon with older material. Collagen isotope analysis is routinely used on Late Pleistocene fossils [@coltrain2004; @fox-dobbs2008; @fox-dobbs2006; @fox-dobbs2005; @landry2021; @fuller2020] including extinct human species [@bocherens2005; @bocherens2009]. Furthermore, *extinct* does not necessarily imply pre-Holocene and many recently extinct faunas have been investigated using stable isotope analysis of collagen including lemurs [@crowley2011], Moas [@rawlence2016], and giant tortoises [@vandersluis2014]. 
+> We do not feel that stable isotope analysis on extinct taxa is rare. Yes, collagen isotope extraction is easier, and therefore more common, when working with more recent archaeological remains but it not uncommon with older material. Collagen isotope analysis is routinely used on Late Pleistocene fossils [@coltrain2004; @fox-dobbs2008; @fox-dobbs2006; @fox-dobbs2005; @landry2021; @fuller2020] including extinct human species [@bocherens2005; @bocherens2009]. Furthermore, *extinct* does not necessarily imply pre-Holocene and many recently extinct faunas have been investigated using stable isotope analysis of collagen including lemurs [@crowley2011], moas [@rawlence2016], and giant tortoises [@vandersluis2014]. 
 
 * Line 20: remove second "of" after "efficacy-of"
 
@@ -91,7 +93,7 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 * Collagen Extraction (page 6: lines 124-125): In general, the Pestle et al. (2014) study found C and N collagen to be comparable but there were a couple of labs with results that deviated strongly from the average for all labs.
 
-> We agree that there is at least one "outlier" lab in the cited study of @pestle2014. We have added "in most cases". We do note that the original study of  states: 
+> We agree that there is at least one "outlier" lab in the cited study of @pestle2014. We have added "in most cases". We note that the original study of  states: 
 
 >>  *"However, the average pairwise difference between any two participating laboratories was only 0.2‰ for δ^13^C~col~ and 0.4‰ for δ^15^N~col~. These values are of such a small magnitude as to not be cause for great concern. As to causality, neither of the most obvious differences in pretreatment between participating laboratories (demineralizing reagent or humic acid removal) had a significant effect on the resulting isotope values."* [@pestle2014]
 
@@ -107,7 +109,7 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 * Materials and Methods (page 8): lines 180-181: Clarify what is meant by "and in the functional position to obtain enough material for our experiments"
 
-> Since sharks grow rows of teeth with a conveyer belt like system, functional position refers to the position in each column of teeth. In our case we collected several teeth from the same individual from the front-most tooth position. We have changed to text to say "from the same individual..." for clarity. 
+> Since sharks grow series of teeth with a conveyer-belt-like system, functional position refers to the position in each column of teeth. In our case we collected several teeth from the same individual from the front-most tooth position. We have changed to text to say "from the same individual..." for clarity. 
 
 * Collagen Yield and Quality (page 12): line 254: change "with in" to "within"
 
@@ -146,7 +148,7 @@ lines 108-109: Sodium hydroxide is routinely used to remove contaminants from ol
 
 > We have added a two sentences to the end of section 4.2 explicitly states we view the mineral content and lower solubility as the reason for slower demineralization of the shark teeth. 
 
->> In contrast to mammals, shark bioapatite is primarily fluorapatite [Ca~5~(PO~4~)F], has overall lower CO3 contents, and is less soluble [@posner1984]. As a result of homogenizing whole teeth, Our Prionace samples also have a higher mineral content, which likely explains the slower demineralization of these samples.  
+>> In contrast to mammals, shark bioapatite is primarily fluorapatite [Ca~5~(PO~4~)F], has overall lower CO~3~ contents, and is less soluble [@posner1984]. As a result of homogenizing whole teeth, Our *Prionace* samples also have a higher mineral content, which likely explains the slower demineralization of these samples.  
 
 * I would publish with minor revisions, as this paper quite nicely shows the necessary step of removing mineral from collagen.
 
