@@ -1,6 +1,8 @@
 # Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy
 
-This repository contains the data, code, and manuscript for **Trayler, R. B., Valencia Landa, P., Kim, S. L., (2023) *Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy*, Journal of Archaeological Science** 
+[![DOI](https://zenodo.org/badge/411031242.svg)](https://zenodo.org/badge/latestdoi/411031242)
+
+This repository contains the data, code, and manuscript editing history for **Trayler, R. B., Valencia Landa, P., Kim, S. L., (2023) *Evaluating the Efficacy of Collagen Isolation Using Stable Isotope Analysis and Infrared Spectroscopy*, Journal of Archaeological Science** 
 
 ## File Structure 
 
